@@ -1,384 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[zoe | blog]]></title>
+  <subtitle><![CDATA[something and everything]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://zoexx.github.io/"/>
+  <updated>2015-07-26T16:49:20.000Z</updated>
+  <id>http://zoexx.github.io/</id>
   
-  <title>zoe | blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="just what u see">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zoe | blog">
-<meta property="og:url" content="http://zoexx.github.io/index.html">
-<meta property="og:site_name" content="zoe | blog">
-<meta property="og:description" content="just what u see">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zoe | blog">
-<meta name="twitter:description" content="just what u see">
-  
-    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-</head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="http://7xndda.com1.z0.glb.clouddn.com/myMarioBlue.jpg" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
-		</hgroup>
-
-		
-		<p class="header-subtitle">something and everything</p>
-		
-
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="http://zoexx.github.io/" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/nothing/" style="font-size: 10px;">nothing</a>
-					</div>
-				</section>
-				
-				
-				
-
-				
-			</div>
-		</div>
-	</header>				
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://7xndda.com1.z0.glb.clouddn.com/myMarioBlue.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Zoe Ying</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">something and everything</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="http://zoexx.github.io/" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-zepto-touch" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/25/zepto-touch/" class="article-date">
-  	<time datetime="2015-07-25T15:16:13.000Z" itemprop="datePublished">2015-07-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+  <author>
+    <name><![CDATA[Zoe Ying]]></name>
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+  </author>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/25/zepto-touch/">zepto touch</a>
-    </h1>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###使用zepto的touch事件</p>
+  <entry>
+    <title><![CDATA[zepto touch]]></title>
+    <link href="http://zoexx.github.io/2015/07/25/zepto-touch/"/>
+    <id>http://zoexx.github.io/2015/07/25/zepto-touch/</id>
+    <published>2015-07-25T15:16:13.000Z</published>
+    <updated>2015-07-26T16:49:20.000Z</updated>
+    <content type="html"><![CDATA[<p>###使用zepto的touch事件</p>
 <p>#####使用zepto的touch事件需要手动将touch.js中的代码引入，并阻止touchmove事件的默认行为;</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//页面加载完毕之后绑定触屏翻页事件</span></span><br><span class="line">Zepto(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'touchmove'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">event.preventDefault();</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line">Zepto(<span class="built_in">document</span>.body).swipeUp(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.debug(e.target);</span><br><span class="line">    nextPage(e.target);</span><br><span class="line">  &#125;);</span><br><span class="line">Zepto(<span class="built_in">document</span>.body).swipeDown(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  prePage(e.target);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>###使用zepto的touch事件</p>
+<p>#####使用zepto的touch事件需要手动将touch.js中的代码引入，并阻止touchmove事件的默认行为;</p>
+<figure class="highlight javascript"><table><t]]>
+    </summary>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
+  </entry>
   
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-new-gitlab-new-err" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/24/new-gitlab-new-err/" class="article-date">
-  	<time datetime="2015-07-24T11:16:13.000Z" itemprop="datePublished">2015-07-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/24/new-gitlab-new-err/">new gitlab new err</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###使用gitlab</p>
+  <entry>
+    <title><![CDATA[new gitlab new err]]></title>
+    <link href="http://zoexx.github.io/2015/07/24/new-gitlab-new-err/"/>
+    <id>http://zoexx.github.io/2015/07/24/new-gitlab-new-err/</id>
+    <published>2015-07-24T11:16:13.000Z</published>
+    <updated>2015-07-24T18:14:15.000Z</updated>
+    <content type="html"><![CDATA[<p>###使用gitlab</p>
 <figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">    Welcome <span class="keyword">to</span> Git (version <span class="number">1.9</span><span class="number">.4</span>-preview20140929)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Run <span class="comment">'git help git' to display the help index.</span></span><br><span class="line">Run <span class="comment">'git help <span class="xmlDocTag">&lt;command&gt;</span>' to display help for specific commands.</span></span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-keygen ?</span><br><span class="line">Too many arguments.</span><br><span class="line">usage: ssh-keygen [options]</span><br><span class="line">Options:</span><br><span class="line">  -A          Generate non-existent host keys <span class="keyword">for</span> all <span class="keyword">key</span> types.</span><br><span class="line">  -a number   Number <span class="keyword">of</span> KDF rounds <span class="keyword">for</span> <span class="keyword">new</span> <span class="keyword">key</span> format <span class="keyword">or</span> moduli primality tests.</span><br><span class="line"></span><br><span class="line">  -B          Show bubblebabble digest <span class="keyword">of</span> <span class="keyword">key</span> file.</span><br><span class="line">  -b bits     Number <span class="keyword">of</span> bits <span class="keyword">in</span> the <span class="keyword">key</span> <span class="keyword">to</span> create.</span><br><span class="line">  -C comment  Provide <span class="keyword">new</span> comment.</span><br><span class="line">  -c          Change comment <span class="keyword">in</span> <span class="keyword">private</span> <span class="keyword">and</span> <span class="keyword">public</span> <span class="keyword">key</span> files.</span><br><span class="line">  -D pkcs11   Download <span class="keyword">public</span> <span class="keyword">key</span> <span class="keyword">from</span> pkcs11 token.</span><br><span class="line">  -e          Export OpenSSH <span class="keyword">to</span> foreign format <span class="keyword">key</span> file.</span><br><span class="line">  -F hostname Find hostname <span class="keyword">in</span> known hosts file.</span><br><span class="line">  -f filename Filename <span class="keyword">of</span> the <span class="keyword">key</span> file.</span><br><span class="line">  -G file     Generate candidates <span class="keyword">for</span> DH-GEX moduli.</span><br><span class="line">  -g          Use generic DNS resource record format.</span><br><span class="line">  -H          Hash names <span class="keyword">in</span> known_hosts file.</span><br><span class="line">  -h          Generate host certificate instead <span class="keyword">of</span> a user certificate.</span><br><span class="line">  -I key_id   <span class="keyword">Key</span> identifier <span class="keyword">to</span> include <span class="keyword">in</span> certificate.</span><br><span class="line">  -i          Import foreign format <span class="keyword">to</span> OpenSSH <span class="keyword">key</span> file.</span><br><span class="line">  -J number   Screen this number <span class="keyword">of</span> moduli lines.</span><br><span class="line">  -j number   Start screening moduli at specified line.</span><br><span class="line">  -K checkpt  Write checkpoints <span class="keyword">to</span> this file.</span><br><span class="line">  -k          Generate a KRL file.</span><br><span class="line">  -L          Print the contents <span class="keyword">of</span> a certificate.</span><br><span class="line">  -l          Show fingerprint <span class="keyword">of</span> <span class="keyword">key</span> file.</span><br><span class="line">  -M memory   Amount <span class="keyword">of</span> memory (MB) <span class="keyword">to</span> use <span class="keyword">for</span> generating DH-GEX moduli.</span><br><span class="line">  -m key_fmt  Conversion format <span class="keyword">for</span> -e/-i (PEM|PKCS8|RFC4716).</span><br><span class="line">  -N phrase   Provide <span class="keyword">new</span> passphrase.</span><br><span class="line">  -n name,... User/host principal names <span class="keyword">to</span> include <span class="keyword">in</span> certificate</span><br><span class="line">  -O <span class="keyword">option</span>   Specify a certificate <span class="keyword">option</span>.</span><br><span class="line">  -o          Enforce <span class="keyword">new</span> <span class="keyword">private</span> <span class="keyword">key</span> format.</span><br><span class="line">  -P phrase   Provide old passphrase.</span><br><span class="line">  -p          Change passphrase <span class="keyword">of</span> <span class="keyword">private</span> <span class="keyword">key</span> file.</span><br><span class="line">  -Q          Test whether <span class="keyword">key</span>(s) are revoked <span class="keyword">in</span> KRL.</span><br><span class="line">  -q          Quiet.</span><br><span class="line">  -R hostname Remove host <span class="keyword">from</span> known_hosts file.</span><br><span class="line">  -r hostname Print DNS resource record.</span><br><span class="line">  -S start    Start point (hex) <span class="keyword">for</span> generating DH-GEX moduli.</span><br><span class="line">  -s ca_key   Certify keys <span class="keyword">with</span> CA <span class="keyword">key</span>.</span><br><span class="line">  -T file     Screen candidates <span class="keyword">for</span> DH-GEX moduli.</span><br><span class="line">  -t type     Specify type <span class="keyword">of</span> <span class="keyword">key</span> <span class="keyword">to</span> create.</span><br><span class="line">  -u          Update KRL rather than creating a <span class="keyword">new</span> one.</span><br><span class="line">  -V <span class="keyword">from</span>:<span class="keyword">to</span>  Specify certificate validity interval.</span><br><span class="line">  -v          Verbose.</span><br><span class="line">  -W gen      Generator <span class="keyword">to</span> use <span class="keyword">for</span> generating DH-GEX moduli.</span><br><span class="line">  -y          Read <span class="keyword">private</span> <span class="keyword">key</span> file <span class="keyword">and</span> print <span class="keyword">public</span> <span class="keyword">key</span>.</span><br><span class="line">  -Z cipher   Specify a cipher <span class="keyword">for</span> <span class="keyword">new</span> <span class="keyword">private</span> <span class="keyword">key</span> format.</span><br><span class="line">  -z serial   Specify a serial number.</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-keygen -t rsa -b <span class="number">4096</span> -C <span class="string">"zoe@52xiaoluo.com"</span></span><br><span class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? n</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-keygen -t rsa -b <span class="number">4096</span> -C <span class="string">"zoe@52xiaoluo.com"</span> -n <span class="string">"xiaoluo"</span></span><br><span class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? n</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-keygen -t xiaoluo -b <span class="number">4096</span> -C <span class="string">"zoe@52xiaoluo.com"</span></span><br><span class="line">unknown <span class="keyword">key</span> type xiaoluo</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-keygen -n xiaoluo -t rsa -b <span class="number">4096</span> -C <span class="string">"zoe@52xiaoluo.com"</span></span><br><span class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? y</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/Administrator/.ssh/id_rsa.</span><br><span class="line">Your <span class="keyword">public</span> <span class="keyword">key</span> has been saved <span class="keyword">in</span> /c/Users/Administrator/.ssh/id_rsa.pub.</span><br><span class="line">The <span class="keyword">key</span> fingerprint <span class="keyword">is</span>:</span><br><span class="line"><span class="number">53</span>:<span class="number">24</span>:<span class="number">49</span>:<span class="number">8</span>a:f4:<span class="number">25</span>:<span class="number">5</span>c:<span class="number">80</span>:<span class="number">3</span>d:b2:a6:<span class="number">90</span>:<span class="number">79</span>:d9:<span class="number">82</span>:f5 zoe@<span class="number">52</span>xiaoluo.com</span><br><span class="line">The <span class="keyword">key</span><span class="comment">'s randomart image is:</span></span><br><span class="line">+--[ RSA <span class="number">4096</span>]----+</span><br><span class="line">|    .+o+=..      |</span><br><span class="line">|  ..oo++.o       |</span><br><span class="line">| = +.oo.  .      |</span><br><span class="line">|= + E    .       |</span><br><span class="line">| o +    S        |</span><br><span class="line">|  .      .       |</span><br><span class="line">|                 |</span><br><span class="line">|                 |</span><br><span class="line">|                 |</span><br><span class="line">+-----------------+</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-agent -s</span><br><span class="line">SSH_AUTH_SOCK=/tmp/ssh-w0PoLr0lMcHQ/agent<span class="number">.3136</span>; export SSH_AUTH_SOCK;</span><br><span class="line">SSH_AGENT_PID=<span class="number">7816</span>; export SSH_AGENT_PID;</span><br><span class="line">echo Agent pid <span class="number">7816</span>;</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">Could <span class="keyword">not</span> open a connection <span class="keyword">to</span> your authentication agent.</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-add /.ssh/id_rsa</span><br><span class="line">Could <span class="keyword">not</span> open a connection <span class="keyword">to</span> your authentication agent.</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ eval $(ssh-agent)</span><br><span class="line">Agent pid <span class="number">6556</span></span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-add /.ssh/id_rsa</span><br><span class="line">/.ssh/id_rsa: No such file <span class="keyword">or</span> directory</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">Identity added: /c/Users/Administrator/.ssh/id_rsa (/c/Users/Administrator/.ssh/</span><br><span class="line">id_rsa)</span><br><span class="line"></span><br><span class="line">Administrator@<span class="number">6</span>BUPAV5AJKSXKAW ~</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
 <p>添加key到gitlab之后<br>git pull<br>显示</p>
-
-      
-    </div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>###使用gitlab</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</s]]>
+    </summary>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+  </entry>
+  
+  <entry>
+    <title><![CDATA[New Post]]></title>
+    <link href="http://zoexx.github.io/2015/07/24/New-Post/"/>
+    <id>http://zoexx.github.io/2015/07/24/New-Post/</id>
+    <published>2015-07-23T16:58:03.000Z</published>
+    <updated>2015-07-23T17:00:30.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Nothing_Special"><a href="#Nothing_Special" class="headerlink" title="Nothing Special"></a>Nothing Special</h1><h2 id="I-M-S-T-D"><a href="#I-M-S-T-D" class="headerlink" title="I.M.S.T.D"></a>I.M.S.T.D</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Nothing_Special"><a href="#Nothing_Special" class="headerlink" title="Nothing Special"></a>Nothing Special</h1><h2 id="I-M-S-T-D"><a]]>
+    </summary>
     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/24/New-Post/" class="article-date">
-  	<time datetime="2015-07-23T16:58:03.000Z" itemprop="datePublished">2015-07-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+      <category term="nothing" scheme="http://zoexx.github.io/tags/nothing/"/>
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+  </entry>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/24/New-Post/">New Post</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Nothing_Special"><a href="#Nothing_Special" class="headerlink" title="Nothing Special"></a>Nothing Special</h1><h2 id="I-M-S-T-D"><a href="#I-M-S-T-D" class="headerlink" title="I.M.S.T.D"></a>I.M.S.T.D</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nothing/">nothing</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2015 Zoe Ying
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
-    </div>
-    
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-  </div>
-</body>
-</html>
+</feed>
