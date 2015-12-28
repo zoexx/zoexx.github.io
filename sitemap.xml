@@ -2,8 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zoexx.github.io/2015/12/28/Statistic/</loc>
+    <lastmod>2015-12-28T16:24:23.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zoexx.github.io/2015/12/26/Resume-appendix-about-Front-end-separation/</loc>
+    <lastmod>2015-12-28T15:55:53.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zoexx.github.io/2015/12/28/MobileBone-SPA/</loc>
-    <lastmod>2015-12-27T17:41:09.000Z</lastmod>
+    <lastmod>2015-12-28T15:52:07.000Z</lastmod>
   </url>
   
   <url>
@@ -14,11 +24,6 @@
   <url>
     <loc>http://zoexx.github.io/2015/07/25/zepto-touch/</loc>
     <lastmod>2015-12-27T16:28:19.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://zoexx.github.io/2015/12/26/Resume-appendix-about-Front-end-separation/</loc>
-    <lastmod>2015-12-27T16:04:34.000Z</lastmod>
   </url>
   
   <url>
