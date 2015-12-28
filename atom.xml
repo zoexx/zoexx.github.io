@@ -4,7 +4,7 @@
   <subtitle><![CDATA[瞎叨叨]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zoexx.github.io/"/>
-  <updated>2015-12-28T16:24:23.000Z</updated>
+  <updated>2015-12-28T17:12:29.000Z</updated>
   <id>http://zoexx.github.io/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <link href="http://zoexx.github.io/2015/12/28/Statistic/"/>
     <id>http://zoexx.github.io/2015/12/28/Statistic/</id>
     <published>2015-12-28T15:49:08.000Z</published>
-    <updated>2015-12-28T16:24:23.000Z</updated>
+    <updated>2015-12-28T17:12:29.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>运营为数据操碎了死开发的心</p>
 </blockquote>
 <p>回顾一下陆陆续续积累到的方法<br>document.referrer<br>手动添加渠道url查询参数<br>cookies记录首次进入站点携带的渠道号<br>事件上报<br>调用接口时带上userId和gustId<br>内部跳转链接加上页面板块的标示<br>利用事件上报统计PV UV</p>
-<p>今天 caedmon同学给大家分享了他对统计系统的想法<br>Elasticsearch<br>用全文检索分析日志扒拉数据<br>涉及的知识点有：索引，分词等<br>给运营最灵活的方式去组合规则，多次筛选<br>针对从A-&gt;B-&gt;C 用户轨迹的分析，neal酱提出 用堆栈记录用户在页面之间的跳转<br>willian提出用图数据库的方式去解决，机智<br>（自己脑补了一下gossip girl中的关系图）</p>
+<p>今天 caedmon同学给大家分享了他对统计系统的想法<br>Elasticsearch<br>用全文检索分析日志扒拉数据<br>涉及的知识点有：索引，全文检索等<br>给运营最灵活的方式去组合规则，多次筛选<br>针对从A-&gt;B-&gt;C 用户轨迹的分析，neal酱提出 用堆栈记录用户在页面之间的跳转<br>讨论解决 活跃 留存的问题<br>需要在根据关键词筛选出来的结果基础上count<br>willian提出用图数据库的方式，机智<br>（自己脑补了一下gossip girl中的关系图）<br>neal提出 考虑到数据量不大统计频次低的情况下可就在此基础上 按运营提出的规则写程序去计算<br>机智，这一点总是值得反思－》想着开发一个功能很是容易一开始就想太多，浪费太多时间在犹豫，纠结上</p>
 <p>留一个疑问 索引的数据结构是怎样的 zzzZZZ</p>
 ]]></content>
     <summary type="html">
