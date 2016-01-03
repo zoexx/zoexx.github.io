@@ -4,7 +4,7 @@
   <subtitle><![CDATA[瞎叨叨]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zoexx.github.io/"/>
-  <updated>2016-01-02T09:10:44.000Z</updated>
+  <updated>2016-01-03T18:46:24.000Z</updated>
   <id>http://zoexx.github.io/</id>
   
   <author>
@@ -15,14 +15,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[不要总加班计划]]></title>
+    <link href="http://zoexx.github.io/2016/01/04/overtime-plan/"/>
+    <id>http://zoexx.github.io/2016/01/04/overtime-plan/</id>
+    <published>2016-01-03T18:07:18.000Z</published>
+    <updated>2016-01-03T18:46:24.000Z</updated>
+    <content type="html"><![CDATA[<p>加班呢，总的来讲就是节奏没把握好</p>
+<p>最容易出现的原因如下：</p>
+<p>被打断－这个地方要改一下<br>急－这个功能今晚要上<br>偷懒－反正明天才上，明天应该搞得定，今天可以玩点别的<br>…….</p>
+<p>刚好在2016的开端<br>写一个脚本去检查每天八点半的时候公司电脑上还有没有跑gulp<br>如果有，说明我在加班，于是发送一条微博，说一下警示自己的话记录一下</p>
+<p>为了实现这一点，申请了一个sae应用<br>问题还是在于登录授权这个验证手段</p>
+<p>地址 <a href="http://overtime.applinzi.com/getRequestToken.php" target="_blank" rel="external">http://overtime.applinzi.com/getRequestToken.php</a><br>捣鼓了一下感觉还行～</p>
+<p>接下来要解决的问题除了免验证之外还有win下的定时任务</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>加班呢，总的来讲就是节奏没把握好</p>
+<p>最容易出现的原因如下：</p>
+<p>被打断－这个地方要改一下<br>急－这个功能今晚要上<br>偷懒－反正明天才上，明天应该搞得定，今天可以玩点别的<br>…….</p>
+<p>刚好在2016的开端<br>写一个脚本去检查每]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[javascriptCore]]></title>
     <link href="http://zoexx.github.io/2016/01/01/javascriptCore/"/>
     <id>http://zoexx.github.io/2016/01/01/javascriptCore/</id>
     <published>2016-01-01T10:31:20.000Z</published>
-    <updated>2016-01-02T09:10:44.000Z</updated>
-    <content type="html"></content>
+    <updated>2016-01-03T18:34:13.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A"><a href="#u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A" class="headerlink" title="浏览器的多条进程（Webkit和Gecko为例）："></a>浏览器的多条进程（Webkit和Gecko为例）：</h3><p>javascript引擎线程<br>界面渲染线程<br>浏览器事件触发线程<br>Http请求线程</p>
+<h3 id="js_u5F15_u64CE"><a href="#js_u5F15_u64CE" class="headerlink" title="js引擎"></a>js引擎</h3><blockquote>
+<p>JavaScriptCore 执行 一系列步骤 来解释和优化脚本：<br>它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。<br>然后用语法分析器分析这些符号，将其构建成语法树。<br>接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生成的字节码。</p>
+<p>Google 的 V8 引擎 是用 C++ 编写的，它也能够编译并执行 JavaScript<br>源代码、处理内存分配和垃圾回收。它被设计成由两个编译器组成，可以把源码直接编译成机器码：<br>Full-codegen：输出未优化代码的快速编译器<br>Crankshaft: 输出执行效率高、优化过的代码的慢速编译器<br>如果 Crankshaft 确定需要优化的代码是由 Full-codegen 生成的未优化代码，它就会取代 Full-codegen，这个过程叫做“crankshafting”。</p>
+</blockquote>
+<p><a href="http://blog.jobbole.com/19310/" target="_blank" rel="external">V8为什么这么快</a><br><a href="http://blog.csdn.net/horkychen/article/details/7888647" target="_blank" rel="external">javascriptCore参考文章-实现</a><br><a href="http://blog.csdn.net/horkychen/article/details/7888647" target="_blank" rel="external">SpiderMonkey参考文章</a></p>
+<p><a href="http://www.nowamagic.net/librarys/veda/detail/1579" target="_blank" rel="external">书签－js探秘</a></p>
+<p>ES6</p>
+<p><a href="http://www.nodeclass.com/api/ECMAScript6.html#intro" target="_blank" rel="external">阮一峰对ES6的介绍</a></p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<h3 id="u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A"><a href="#u6D4F_u89C8_u5668_u7684_u5]]>
     </summary>
     
       <category term="javascript" scheme="http://zoexx.github.io/tags/javascript/"/>
