@@ -255,11 +255,12 @@
 <p>刚好在2016的开端<br>写一个脚本去检查每天八点半的时候公司电脑上还有没有跑node<br>如果有，说明我在加班，于是发送一条微博，说一下警示自己的话记录一下</p>
 <p>为了实现这一点，申请了一个sae应用<br>问题还是在于登录授权这个验证手段</p>
 <p><a href="http://overtime.applinzi.com/getRequestToken.php" target="_blank" rel="external">地址</a><br>捣鼓了一下感觉还行～</p>
-<p>接下来要解决的问题主要事一次授权长期使用的问题</p>
 <p>win下的定时监测任务</p>
 <p>“系统工具”—&gt;”任务计划程序”</p>
 <p>overTime.bat</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="annotation">@echo</span> off</span><br><span class="line">tasklist|find <span class="string">"node.exe"</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"%errorlevel%"</span>==<span class="string">"0"</span> (</span><br><span class="line">    telnet <span class="string">http:</span><span class="comment">//<span class="label">xxxxxx</span></span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    echo.donotrun</span><br><span class="line">)</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<p>接下来要解决的问题主要是一次授权长期使用的问题</p>
+
       
     </div>
     
