@@ -3,26 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascriptCore | zoe | blog</title>
+  <title>gulp传参数 | zoe | blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
   <meta name="baidu-site-verification" content="udDjGff8vn" />
-  <meta name="description" content="浏览器的多条进程（Webkit和Gecko为例）：javascript引擎线程界面渲染线程浏览器事件触发线程Http请求线程
-js引擎
-JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。然后用语法分析器分析这些符号，将其构建成语法树。接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生">
+  <meta name="description" content="webpack多了之后 如果在开发环境下gulp要watch以及每次自动执行的范围太大，很慢只想对正在开发的任务进行监听跟构建这时候呢可以单独写一个任务但是希望能灵活一些这里想到传参数给gulp的task
+123456789101112131415if (gulp.env.choose)&amp;#123;    var map = &amp;#123;       &quot;map&quot;:&quot;map/main&quot;,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascriptCore">
-<meta property="og:url" content="http://zoexx.github.io/2016/01/01/javascriptCore/index.html">
+<meta property="og:title" content="gulp传参数">
+<meta property="og:url" content="http://zoexx.github.io/2016/01/05/Transfer-parameters-in-gulp/index.html">
 <meta property="og:site_name" content="zoe | blog">
-<meta property="og:description" content="浏览器的多条进程（Webkit和Gecko为例）：javascript引擎线程界面渲染线程浏览器事件触发线程Http请求线程
-js引擎
-JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。然后用语法分析器分析这些符号，将其构建成语法树。接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生">
-<meta property="og:updated_time" content="2016-01-03T18:34:13.000Z">
+<meta property="og:description" content="webpack多了之后 如果在开发环境下gulp要watch以及每次自动执行的范围太大，很慢只想对正在开发的任务进行监听跟构建这时候呢可以单独写一个任务但是希望能灵活一些这里想到传参数给gulp的task
+123456789101112131415if (gulp.env.choose)&amp;#123;    var map = &amp;#123;       &quot;map&quot;:&quot;map/main&quot;,">
+<meta property="og:updated_time" content="2016-01-04T18:17:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascriptCore">
-<meta name="twitter:description" content="浏览器的多条进程（Webkit和Gecko为例）：javascript引擎线程界面渲染线程浏览器事件触发线程Http请求线程
-js引擎
-JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。然后用语法分析器分析这些符号，将其构建成语法树。接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生">
+<meta name="twitter:title" content="gulp传参数">
+<meta name="twitter:description" content="webpack多了之后 如果在开发环境下gulp要watch以及每次自动执行的范围太大，很慢只想对正在开发的任务进行监听跟构建这时候呢可以单独写一个任务但是希望能灵活一些这里想到传参数给gulp的task
+123456789101112131415if (gulp.env.choose)&amp;#123;    var map = &amp;#123;       &quot;map&quot;:&quot;map/main&quot;,">
   
     <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
   
@@ -166,11 +163,11 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-javascriptCore" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Transfer-parameters-in-gulp" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/01/javascriptCore/" class="article-date">
-  	<time datetime="2016-01-01T10:31:20.000Z" itemprop="datePublished">2016-01-01</time>
+      <a href="/2016/01/05/Transfer-parameters-in-gulp/" class="article-date">
+  	<time datetime="2016-01-04T18:13:38.000Z" itemprop="datePublished">2016-01-05</time>
 </a>
     </div>
   
@@ -183,7 +180,7 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
         
   
     <h1 class="article-title" itemprop="name">
-      javascriptCore
+      gulp传参数
     </h1>
   
 
@@ -192,7 +189,7 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
 	</div>
 
         
@@ -203,15 +200,14 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A"><a href="#u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A" class="headerlink" title="浏览器的多条进程（Webkit和Gecko为例）："></a>浏览器的多条进程（Webkit和Gecko为例）：</h3><p>javascript引擎线程<br>界面渲染线程<br>浏览器事件触发线程<br>Http请求线程</p>
-<h3 id="js_u5F15_u64CE"><a href="#js_u5F15_u64CE" class="headerlink" title="js引擎"></a>js引擎</h3><blockquote>
-<p>JavaScriptCore 执行 一系列步骤 来解释和优化脚本：<br>它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。<br>然后用语法分析器分析这些符号，将其构建成语法树。<br>接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生成的字节码。</p>
-<p>Google 的 V8 引擎 是用 C++ 编写的，它也能够编译并执行 JavaScript<br>源代码、处理内存分配和垃圾回收。它被设计成由两个编译器组成，可以把源码直接编译成机器码：<br>Full-codegen：输出未优化代码的快速编译器<br>Crankshaft: 输出执行效率高、优化过的代码的慢速编译器<br>如果 Crankshaft 确定需要优化的代码是由 Full-codegen 生成的未优化代码，它就会取代 Full-codegen，这个过程叫做“crankshafting”。</p>
-</blockquote>
-<p><a href="http://blog.jobbole.com/19310/" target="_blank" rel="external">V8为什么这么快</a><br><a href="http://blog.csdn.net/horkychen/article/details/7888647" target="_blank" rel="external">javascriptCore参考文章-实现</a><br><a href="http://blog.csdn.net/horkychen/article/details/7888647" target="_blank" rel="external">SpiderMonkey参考文章</a></p>
-<p><a href="http://www.nowamagic.net/librarys/veda/detail/1579" target="_blank" rel="external">书签－js探秘</a></p>
-<p>ES6</p>
-<p><a href="http://www.nodeclass.com/api/ECMAScript6.html#intro" target="_blank" rel="external">阮一峰对ES6的介绍</a></p>
+        <p>webpack多了之后 如果在开发环境下gulp要watch以及每次自动执行的范围太大，很慢<br>只想对正在开发的任务进行监听跟构建<br>这时候呢可以单独写一个任务<br>但是希望能灵活一些<br>这里想到传参数给gulp的task</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (gulp.env.choose)&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">map</span> = &#123;</span><br><span class="line">       <span class="string">"map"</span>:<span class="string">"map/main"</span>,</span><br><span class="line">       <span class="string">"compare"</span>:<span class="string">"acitvityCompareGuidance/main"</span>,</span><br><span class="line">       <span class="string">"face"</span>:<span class="string">"faceScore/main"</span>,</span><br><span class="line">       <span class="string">"assistant"</span>:<span class="string">"assistant/main"</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> temp = <span class="keyword">map</span>[gulp.env.choose];</span><br><span class="line">    <span class="keyword">if</span> (temp)&#123;</span><br><span class="line">        console.log(<span class="string">'webpack choose :'</span> + temp);</span><br><span class="line">        webpackSrc = mapFiles([temp], <span class="string">'js'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        console.log(<span class="string">'webpack choose undefined , please check the map'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行方法<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">gulp</span> webpack-<span class="keyword">build </span>--choose <span class="preprocessor">map</span></span><br></pre></td></tr></table></figure></p>
+<p>原理</p>
+<p>gulp下有个evn 属性可以接受参数,evn 属性值对应一个对象:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [] </span></span></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <em> 属性值是一个空数组,当我们制定gulp 任务时,任务名会默认填充 </em> 属性值的数组.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [ <span class="string">'kendo'</span>] </span></span></span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span> <span class="tag">xxxx</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [<span class="string">'kendo'</span>,<span class="string">'xxxx'</span>] </span></span></span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span> <span class="tag">--choose</span> <span class="tag">value</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [<span class="string">'choose'</span>,<span class="string">'value'</span>] </span></span></span>&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -221,18 +217,9 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
     
 <nav id="article-nav">
   
-    <a href="/2016/01/04/overtime-plan/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          不要总加班计划
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/28/Statistic/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于用户行为追踪，行为数据统计</div>
+    <a href="/2016/01/04/overtime-plan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">不要总加班计划</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -261,7 +248,7 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="javascriptCore" data-title="javascriptCore" data-url="http://zoexx.github.io/2016/01/01/javascriptCore/"></div>
+	<div class="ds-thread" data-thread-key="Transfer-parameters-in-gulp" data-title="gulp传参数" data-url="http://zoexx.github.io/2016/01/05/Transfer-parameters-in-gulp/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

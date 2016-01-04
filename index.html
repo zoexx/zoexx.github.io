@@ -103,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
+						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
 					</div>
 				</section>
 				
@@ -160,6 +160,68 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Transfer-parameters-in-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/05/Transfer-parameters-in-gulp/" class="article-date">
+  	<time datetime="2016-01-04T18:13:38.000Z" itemprop="datePublished">2016-01-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/05/Transfer-parameters-in-gulp/">gulp传参数</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>webpack多了之后 如果在开发环境下gulp要watch以及每次自动执行的范围太大，很慢<br>只想对正在开发的任务进行监听跟构建<br>这时候呢可以单独写一个任务<br>但是希望能灵活一些<br>这里想到传参数给gulp的task</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (gulp.env.choose)&#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="keyword">map</span> = &#123;</span><br><span class="line">       <span class="string">"map"</span>:<span class="string">"map/main"</span>,</span><br><span class="line">       <span class="string">"compare"</span>:<span class="string">"acitvityCompareGuidance/main"</span>,</span><br><span class="line">       <span class="string">"face"</span>:<span class="string">"faceScore/main"</span>,</span><br><span class="line">       <span class="string">"assistant"</span>:<span class="string">"assistant/main"</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> temp = <span class="keyword">map</span>[gulp.env.choose];</span><br><span class="line">    <span class="keyword">if</span> (temp)&#123;</span><br><span class="line">        console.log(<span class="string">'webpack choose :'</span> + temp);</span><br><span class="line">        webpackSrc = mapFiles([temp], <span class="string">'js'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        console.log(<span class="string">'webpack choose undefined , please check the map'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行方法<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">gulp</span> webpack-<span class="keyword">build </span>--choose <span class="preprocessor">map</span></span><br></pre></td></tr></table></figure></p>
+<p>原理</p>
+<p>gulp下有个evn 属性可以接受参数,evn 属性值对应一个对象:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [] </span></span></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <em> 属性值是一个空数组,当我们制定gulp 任务时,任务名会默认填充 </em> 属性值的数组.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [ <span class="string">'kendo'</span>] </span></span></span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span> <span class="tag">xxxx</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [<span class="string">'kendo'</span>,<span class="string">'xxxx'</span>] </span></span></span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span> <span class="tag">kendo</span> <span class="tag">--choose</span> <span class="tag">value</span></span><br><span class="line"></span><br><span class="line"><span class="tag">gulp</span><span class="class">.env</span>: <span class="rules">&#123; <span class="rule"><span class="attribute">_</span>:<span class="value"> [<span class="string">'choose'</span>,<span class="string">'value'</span>] </span></span></span>&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-overtime-plan" class="article article-type-post" itemscope itemprop="blogPost">
   
