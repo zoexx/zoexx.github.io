@@ -29,7 +29,7 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
   
     <link rel="icon" href="http://7xndda.com1.z0.glb.clouddn.com/favicon.png">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -203,8 +203,8 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A"><a href="#u6D4F_u89C8_u5668_u7684_u591A_u6761_u8FDB_u7A0B_uFF08Webkit_u548CGecko_u4E3A_u4F8B_uFF09_uFF1A" class="headerlink" title="浏览器的多条进程（Webkit和Gecko为例）："></a>浏览器的多条进程（Webkit和Gecko为例）：</h3><p>javascript引擎线程<br>界面渲染线程<br>浏览器事件触发线程<br>Http请求线程</p>
-<h3 id="js_u5F15_u64CE"><a href="#js_u5F15_u64CE" class="headerlink" title="js引擎"></a>js引擎</h3><blockquote>
+        <h3 id="浏览器的多条进程（Webkit和Gecko为例）："><a href="#浏览器的多条进程（Webkit和Gecko为例）：" class="headerlink" title="浏览器的多条进程（Webkit和Gecko为例）："></a>浏览器的多条进程（Webkit和Gecko为例）：</h3><p>javascript引擎线程<br>界面渲染线程<br>浏览器事件触发线程<br>Http请求线程</p>
+<h3 id="js引擎"><a href="#js引擎" class="headerlink" title="js引擎"></a>js引擎</h3><blockquote>
 <p>JavaScriptCore 执行 一系列步骤 来解释和优化脚本：<br>它进行词法分析，就是将源代码分解成一系列具有明确含义的符号或字符串。<br>然后用语法分析器分析这些符号，将其构建成语法树。<br>接着四个 JIT（Just-In-Time）进程开始参与进来，分析和执行解析器所生成的字节码。</p>
 <p>Google 的 V8 引擎 是用 C++ 编写的，它也能够编译并执行 JavaScript<br>源代码、处理内存分配和垃圾回收。它被设计成由两个编译器组成，可以把源码直接编译成机器码：<br>Full-codegen：输出未优化代码的快速编译器<br>Crankshaft: 输出执行效率高、优化过的代码的慢速编译器<br>如果 Crankshaft 确定需要优化的代码是由 Full-codegen 生成的未优化代码，它就会取代 Full-codegen，这个过程叫做“crankshafting”。</p>
 </blockquote>
@@ -296,7 +296,7 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
 
 <script>
@@ -312,8 +312,8 @@ JavaScriptCore 执行 一系列步骤 来解释和优化脚本：它进行词法
 		open_in_new: false
 	}
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
