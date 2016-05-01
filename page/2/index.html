@@ -103,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
+						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
 					</div>
 				</section>
 				
@@ -160,6 +160,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-zepto-touch" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/25/zepto-touch/" class="article-date">
+  	<time datetime="2015-07-25T15:16:13.000Z" itemprop="datePublished">2015-07-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/zepto-touch/">移动开发遇到的一些问题和解决方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="u4E3A_u5B9E_u73B0_u6ED1_u52A8_u7FFB_u9875_uFF0C_u4F7F_u7528zepto_u7684touch_u4E8B_u4EF6_u9700_u8981_u624B_u52A8_u5C06touch-js_u4E2D_u7684_u4EE3_u7801_u5F15_u5165_uFF0C_u5E76_u963B_u6B62touchmove_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A_3B"><a href="#u4E3A_u5B9E_u73B0_u6ED1_u52A8_u7FFB_u9875_uFF0C_u4F7F_u7528zepto_u7684touch_u4E8B_u4EF6_u9700_u8981_u624B_u52A8_u5C06touch-js_u4E2D_u7684_u4EE3_u7801_u5F15_u5165_uFF0C_u5E76_u963B_u6B62touchmove_u4E8B_u4EF6_u7684_u9ED8_u8BA4_u884C_u4E3A_3B" class="headerlink" title="为实现滑动翻页，使用zepto的touch事件需要手动将touch.js中的代码引入，并阻止touchmove事件的默认行为;"></a>为实现滑动翻页，使用zepto的touch事件需要手动将touch.js中的代码引入，并阻止touchmove事件的默认行为;</h3><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Zepto<span class="list">(<span class="keyword">function</span><span class="list">($)</span>&#123;</span><br><span class="line">	document.addEventListener<span class="list">(<span class="quoted">'touchmove</span>', function <span class="list">(<span class="keyword">event</span>)</span> &#123;</span><br><span class="line">		event.preventDefault<span class="list">()</span><span class="comment">;</span></span><br><span class="line">	&#125;, false)</span><span class="comment">;</span></span><br><span class="line">	Zepto<span class="list">(<span class="keyword">document</span>.body)</span>.swipeUp<span class="list">(<span class="keyword">function</span><span class="list">(<span class="keyword">e</span>)</span>&#123;</span><br><span class="line">		console.debug<span class="list">(<span class="keyword">e</span>.currentTarget)</span><span class="comment">;</span></span><br><span class="line">	    nextPage<span class="list">(<span class="keyword">e</span>.currentTarget)</span><span class="comment">;</span></span><br><span class="line">	  &#125;)</span><span class="comment">;</span></span><br><span class="line">	Zepto<span class="list">(<span class="keyword">document</span>.body)</span>.swipeDown<span class="list">(<span class="keyword">function</span><span class="list">(<span class="keyword">e</span>)</span>&#123;</span><br><span class="line">		prePage<span class="list">(<span class="keyword">e</span>.currentTarget)</span><span class="comment">;</span></span><br><span class="line">	&#125;)</span><span class="comment">;</span></span><br><span class="line">&#125;)</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h3 id="tap_u70B9_u900F"><a href="#tap_u70B9_u900F" class="headerlink" title="tap点透"></a>tap点透</h3><p>换click，click慢300ms，用fastclick。</p>
+<h3 id="u8DDF_u968FscrollTop_u53D8_u5316_u7684_u5BFC_u822A_u680F"><a href="#u8DDF_u968FscrollTop_u53D8_u5316_u7684_u5BFC_u822A_u680F" class="headerlink" title="跟随scrollTop变化的导航栏"></a>跟随scrollTop变化的导航栏</h3><p>要结合touchmove touchstart touchend事件来响应，以避免导航变化延迟的问题</p>
+<h3 id="u6ED1_u52A8_u5F39_u51FA_u5C42_u5185_u5BB9"><a href="#u6ED1_u52A8_u5F39_u51FA_u5C42_u5185_u5BB9" class="headerlink" title="滑动弹出层内容"></a>滑动弹出层内容</h3><p>卡顿，调用原生滚动，回弹效果 -webkit-overflow-scrolling : touch;<br>事件冒泡，body内容也跟着滚动，阻止事件冒泡</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ScrollFix = <span class="function"><span class="keyword">function</span><span class="params">(elem)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> startY = startTopScroll = deltaY = <span class="literal">undefined</span>,</span><br><span class="line"></span><br><span class="line">    elem = elem || elem.querySelector(elem);</span><br><span class="line">    <span class="keyword">if</span>(!elem)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    elem.addEventListener(<span class="string">'touchstart'</span>, <span class="function"><span class="keyword">function</span><span class="params">(event)</span></span>&#123;</span><br><span class="line">        startY = event.touches[<span class="number">0</span>].pageY;</span><br><span class="line">        startTopScroll = elem.scrollTop;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(startTopScroll &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">            elem.scrollTop = <span class="number">1</span>;</span><br><span class="line">            event.stopPropagation();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(startTopScroll + elem.offsetHeight &gt;= elem.scrollHeight)&#123;</span><br><span class="line">            elem.scrollTop = elem.scrollHeight - elem.offsetHeight - <span class="number">1</span>;</span><br><span class="line">            event.stopPropagation();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobile/">mobile</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
   

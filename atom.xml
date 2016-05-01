@@ -4,7 +4,7 @@
   <subtitle><![CDATA[瞎叨叨]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://zoexx.github.io/"/>
-  <updated>2016-04-23T03:48:19.000Z</updated>
+  <updated>2016-05-01T16:55:30.000Z</updated>
   <id>http://zoexx.github.io/</id>
   
   <author>
@@ -15,11 +15,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[what-do-u-worry-about]]></title>
+    <link href="http://zoexx.github.io/2016/05/02/what-do-u-worry-about/"/>
+    <id>http://zoexx.github.io/2016/05/02/what-do-u-worry-about/</id>
+    <published>2016-05-01T16:16:34.000Z</published>
+    <updated>2016-05-01T16:55:30.000Z</updated>
+    <content type="html"><![CDATA[<p>4月28号，写完交接文档，我们删除了各自电脑中的资料，办理离职。</p>
+<p>早在一周前的炭工烧烤，就知道这么一天不远了，离开时还是很难受。</p>
+<p>看到neal从财务出来直接去了洗手间，我想他的心情是很复杂的。</p>
+<p>一年半，眼睁睁看着这家公司由几个人到上百号人到二十来人又到如今，连自己都要离开。</p>
+<p>一年半，39个工程，520个commit，好多个加班的深夜。</p>
+<p>伴随着这一年半的还有丁记烩面，湖南大碗菜，兰州拉面，黄焖鸡，客家菜….天天说吃腻了可还是外卖首选的好运。</p>
+<p>我问neal，这像不像毕业前夕，我们收拾各自的行李，然后陆续离开。</p>
+<p>neal回，又不是第一次了。</p>
+<p>好的吧，你不是第一次，可是你也会忍不住难过。</p>
+<p>再不舍得，也该散了，毕竟对于现在公司的业务来说，我们这班开发已是豪华配置。</p>
+<p>………..分割线在此…………..<br>………..分割线在此…………..</p>
+<p>翻篇了，玩玩耍耍过完五一，我也要面对没有收入这个事实，得尽快找到新工作，或者兼职。</p>
+<p>给自己两周的时间吧</p>
+<ol>
+<li>把作息时间调整好，不可再像上班的疲劳期，每日九点才起。</li>
+<li>准备一份简历。</li>
+<li>做一个阅读计划，补基础，刷题目。</li>
+<li>keep fit 减掉这半年长的膘。</li>
+<li>现在没有工作累作为借口，写写总结。</li>
+</ol>
+<p><img src="http://img.xiami.net/images/album/img25/98025/5250161345787778_2.jpg" alt="orange -benjamin"></p>
+<embed src="http://www.xiami.com/widget/0_1771130791,_460_360_CD5C5C_808080_1/multiPlayer.swf" type="application/x-shockwave-flash" width="185" height="93" wmode="transparent" title="Adobe Flash Player">]]></content>
+    <summary type="html">
+    <![CDATA[<p>4月28号，写完交接文档，我们删除了各自电脑中的资料，办理离职。</p>
+<p>早在一周前的炭工烧烤，就知道这么一天不远了，离开时还是很难受。</p>
+<p>看到neal从财务出来直接去了洗手间，我想他的心情是很复杂的。</p>
+<p>一年半，眼睁睁看着这家公司由几个人到上]]>
+    </summary>
+    
+      <category term="life" scheme="http://zoexx.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[vue-filter]]></title>
     <link href="http://zoexx.github.io/2016/01/08/vue-filter/"/>
     <id>http://zoexx.github.io/2016/01/08/vue-filter/</id>
     <published>2016-01-07T17:11:17.000Z</published>
-    <updated>2016-04-23T03:48:19.000Z</updated>
+    <updated>2016-05-01T16:14:01.000Z</updated>
     <content type="html"><![CDATA[<p>今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏<br>写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码<br>而且可以动态修改数据来修改筛选栏<br>来一张截图</p>
 <p><img src="http://7xndda.com1.z0.glb.clouddn.com/re_write_filter.png" alt="vue-filter"></p>
 <p>由直接操作DOM转为直接操作数据</p>
@@ -31,7 +70,7 @@
 <p>dom</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">optionBox</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳南山中心区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州白云区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line"><span class="tag">&lt;/<span class="title">optionBox</span>&gt;</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>我需要判断数据中是否含有”c(context)”来增加一个container，然而在开发时发现除非把数据拆成扁平的与dom结构一致，无法写成层级较深的递归</p>
-<p>联动时 使用了index来标记激活的选项<br>这样做的坏处也是显而易见的<br>如果有四级的联动 就需要手动加一个container</p>
+<p>联动时 使用了index来标记激活的选项<br>这样做的坏处也是显而易见的<br>如果有四级的联动 就需要手动加一个container<br>：（<br>下次重构 换种思路</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏<br>写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码<br>而且可以动态修改数据来修改筛选栏<br>来一张截图</p>
@@ -97,7 +136,7 @@
     <link href="http://zoexx.github.io/2016/01/04/overtime-plan/"/>
     <id>http://zoexx.github.io/2016/01/04/overtime-plan/</id>
     <published>2016-01-03T18:07:18.000Z</published>
-    <updated>2016-01-04T19:25:17.000Z</updated>
+    <updated>2016-04-23T04:59:37.000Z</updated>
     <content type="html"><![CDATA[<p>加班呢，总的来讲就是节奏没把握好</p>
 <p>最容易出现的原因如下：</p>
 <p>被打断－这个地方要改一下<br>急－这个功能今晚要上<br>偷懒－反正明天才上，明天应该搞得定，今天可以玩点别的<br>…….</p>
@@ -107,9 +146,7 @@
 <p>win下的定时监测任务</p>
 <p>“系统工具”—&gt;”任务计划程序”</p>
 <p>overTime.bat</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="annotation">@echo</span> off</span><br><span class="line">tasklist|find <span class="string">"node.exe"</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"%errorlevel%"</span>==<span class="string">"0"</span> (</span><br><span class="line">    telnet <span class="string">http:</span><span class="comment">//<span class="label">xxxxxx</span></span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    echo.donotrun</span><br><span class="line">)</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-<p>接下来要解决的问题主要是一次授权长期使用的问题</p>
-]]></content>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="annotation">@echo</span> off</span><br><span class="line">tasklist|find <span class="string">"node.exe"</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">"%errorlevel%"</span>==<span class="string">"0"</span> (</span><br><span class="line">    telnet <span class="string">http:</span><span class="comment">//<span class="label">xxxxxx</span></span></span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">    echo.donotrun</span><br><span class="line">)</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<p>加班呢，总的来讲就是节奏没把握好</p>
 <p>最容易出现的原因如下：</p>

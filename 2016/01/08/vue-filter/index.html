@@ -24,7 +24,7 @@
 做小螺管家app时 试图用react重写发现这个思路很有问题它试图将 多层级的data转换为扁平的domdata结构如下，这是后台惯用的多层级结构，而dom的结构是扁平的
 12345678910111">
 <meta property="og:image" content="http://7xndda.com1.z0.glb.clouddn.com/re_write_filter.png">
-<meta property="og:updated_time" content="2016-04-23T03:48:19.000Z">
+<meta property="og:updated_time" content="2016-05-01T16:14:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-filter">
 <meta name="twitter:description" content="今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码而且可以动态修改数据来修改筛选栏来一张截图
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
+						<a href="/tags/Resume-appendix/" style="font-size: 10px;">Resume appendix</a> <a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/test/" style="font-size: 20px;">test</a>
 					</div>
 				</section>
 				
@@ -220,7 +220,7 @@
 <p>dom</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">optionBox</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳南山中心区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州白云区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line"><span class="tag">&lt;/<span class="title">optionBox</span>&gt;</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>我需要判断数据中是否含有”c(context)”来增加一个container，然而在开发时发现除非把数据拆成扁平的与dom结构一致，无法写成层级较深的递归</p>
-<p>联动时 使用了index来标记激活的选项<br>这样做的坏处也是显而易见的<br>如果有四级的联动 就需要手动加一个container</p>
+<p>联动时 使用了index来标记激活的选项<br>这样做的坏处也是显而易见的<br>如果有四级的联动 就需要手动加一个container<br>：（<br>下次重构 换种思路</p>
 
       
     </div>
@@ -229,6 +229,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/05/02/what-do-u-worry-about/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          what-do-u-worry-about
+        
+      </div>
+    </a>
   
   
     <a href="/2016/01/06/start-from-a-url/" id="article-nav-older" class="article-nav-link-wrap">
