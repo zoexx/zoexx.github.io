@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zoexx.github.io/"/>
-  <updated>2016-05-12T12:07:52.000Z</updated>
+  <updated>2016-05-12T12:49:43.000Z</updated>
   <id>http://zoexx.github.io/</id>
   
   <author>
@@ -20,26 +20,28 @@
     <link href="http://zoexx.github.io/2016/05/12/charles-maplocal/"/>
     <id>http://zoexx.github.io/2016/05/12/charles-maplocal/</id>
     <published>2016-05-12T11:11:49.000Z</published>
-    <updated>2016-05-12T12:07:52.000Z</updated>
+    <updated>2016-05-12T12:49:43.000Z</updated>
     
-    <content type="html">&lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇教程。&lt;/p&gt;
+    <content type="html">&lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇代理本地文件的教程。&lt;/p&gt;
 &lt;h4 id=&quot;软件介绍：&quot;&gt;&lt;a href=&quot;#软件介绍：&quot; class=&quot;headerlink&quot; title=&quot;软件介绍：&quot;&gt;&lt;/a&gt;软件介绍：&lt;/h4&gt;&lt;p&gt;Charles 是一款Mac上的HTTP代理服务器、HTTP监视器、反向代理服务器，今天和大家分享最新的3.11.2版本，完美兼容最新的OS X 10.11系统，Charles可以让开发者监视查看所有连接互联网的HTTP通信，包括请求，响应和HTTP头信息等等，俗称“抓包”工具，对于Web开发人员来说是一款很有价值的辅助工具，具有Firefox插件，非常不错！&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.charlesproxy.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网地址&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;1-设置系统代理&quot;&gt;&lt;a href=&quot;#1-设置系统代理&quot; class=&quot;headerlink&quot; title=&quot;1. 设置系统代理&quot;&gt;&lt;/a&gt;1. 设置系统代理&lt;/h4&gt;&lt;p&gt;（如果没有使用shadow socket 之类的代理 可以跳过这一步）&lt;br&gt;配合chrome使用时要将 系统代理地址和端口设置为charles的地址和端口&lt;br&gt;（可在charles的 Proxy &amp;gt; Proxy Settings 中设置端口， 默认是 8888）&lt;/p&gt;
+&lt;h4 id=&quot;1-设置系统代理&quot;&gt;&lt;a href=&quot;#1-设置系统代理&quot; class=&quot;headerlink&quot; title=&quot;1. 设置系统代理&quot;&gt;&lt;/a&gt;1. 设置系统代理&lt;/h4&gt;&lt;p&gt;在charles的菜单栏 proxy &amp;gt; Mac OS X proxy 打上勾&lt;/p&gt;
+&lt;p&gt;（如果没有使用shadow socket 之类的代理 可以跳过）&lt;br&gt;配合chrome使用时要将 系统代理地址和端口设置为charles的地址和端口&lt;br&gt;（可在charles的 Proxy &amp;gt; Proxy Settings 中设置端口， 默认是 8888）&lt;/p&gt;
 &lt;p&gt;系统偏好设置 &amp;gt; 网络 &amp;gt; 高级…(正在使用的网络) &amp;gt; 代理 &amp;gt; Web代理（HTTP）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_1.png&quot; alt=&quot;set poxy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_1.png&quot; alt=&quot;set proxy&quot;&gt;&lt;/p&gt;
 &lt;p&gt;如果使用ss需要经常切换代理，可以使用一款chrome的插件 Proxy SwitchyOmega&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_2.png&quot; alt=&quot;Proxy SwitchyOmega&quot;&gt;&lt;/p&gt;
 &lt;h4 id=&quot;2-Map-Local&quot;&gt;&lt;a href=&quot;#2-Map-Local&quot; class=&quot;headerlink&quot; title=&quot;2.Map Local&quot;&gt;&lt;/a&gt;2.Map Local&lt;/h4&gt;&lt;p&gt;设置好代理之后，用chrome浏览网站，可以在charles中看到请求：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_3.png&quot; alt=&quot;request&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_4.png&quot; alt=&quot;map local&quot;&gt;&lt;/p&gt;
 &lt;p&gt;替换之后可以写一些测试语句看是否生效&lt;br&gt;接下来 就可以做你爱做的事情啦&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.devtang.com/2015/11/14/charles-introduction/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;关于charles更详细的中文教程&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇教程。&lt;/p&gt;
-&lt;h4 id=&quot;软件介绍：&quot;&gt;&lt;a href=&quot;#软件介绍：&quot; class=&quot;headerlink&quot; title=&quot;软件介绍：&quot;&gt;&lt;/a&gt;软件介绍：&lt;/h4&gt;&lt;p&gt;Charles
+      &lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇代理本地文件的教程。&lt;/p&gt;
+&lt;h4 id=&quot;软件介绍：&quot;&gt;&lt;a href=&quot;#软件介绍：&quot; class=&quot;headerlink&quot; title=&quot;软件介绍：&quot;&gt;&lt;/a&gt;软件介绍：&lt;/h4&gt;&lt;p&gt;
     
     </summary>
     
