@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zoexx.github.io/"/>
-  <updated>2016-05-01T17:21:09.000Z</updated>
+  <updated>2016-05-12T11:21:39.000Z</updated>
   <id>http://zoexx.github.io/</id>
   
   <author>
@@ -16,18 +16,123 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>charles-maplocal</title>
+    <link href="http://zoexx.github.io/2016/05/12/charles-maplocal/"/>
+    <id>http://zoexx.github.io/2016/05/12/charles-maplocal/</id>
+    <published>2016-05-12T11:11:49.000Z</published>
+    <updated>2016-05-12T11:21:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇教程。&lt;/p&gt;
+&lt;h4 id=&quot;软件介绍：&quot;&gt;&lt;a href=&quot;#软件介绍：&quot; class=&quot;headerlink&quot; title=&quot;软件介绍：&quot;&gt;&lt;/a&gt;软件介绍：&lt;/h4&gt;&lt;p&gt;Charles 是一款Mac上的HTTP代理服务器、HTTP监视器、反向代理服务器，今天和大家分享最新的3.11.2版本，完美兼容最新的OS X 10.11系统，Charles可以让开发者监视查看所有连接互联网的HTTP通信，包括请求，响应和HTTP头信息等等，俗称“抓包”工具，对于Web开发人员来说是一款很有价值的辅助工具，具有Firefox插件，非常不错！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.charlesproxy.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官网地址&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-设置系统代理&quot;&gt;&lt;a href=&quot;#1-设置系统代理&quot; class=&quot;headerlink&quot; title=&quot;1. 设置系统代理&quot;&gt;&lt;/a&gt;1. 设置系统代理&lt;/h4&gt;&lt;p&gt;（如果没有使用shadow socket 之类的代理 可以跳过这一步）&lt;br&gt;配合chrome使用时要将 系统代理地址和端口设置为charles的地址和端口&lt;br&gt;（可在charles的 Proxy &amp;gt; Proxy Settings 中设置端口， 默认是 8888）&lt;/p&gt;
+&lt;p&gt;系统偏好设置 &amp;gt; 网络 &amp;gt; 高级…(正在使用的网络) &amp;gt; 代理 &amp;gt; Web代理（HTTP）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_1.png&quot; alt=&quot;set poxy&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果使用ss需要经常切换代理，可以使用一款chrome的插件 Proxy SwitchyOmega&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_2.png&quot; alt=&quot;Proxy SwitchyOmega&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;2-Map-Local&quot;&gt;&lt;a href=&quot;#2-Map-Local&quot; class=&quot;headerlink&quot; title=&quot;2.Map Local&quot;&gt;&lt;/a&gt;2.Map Local&lt;/h4&gt;&lt;p&gt;设置好代理之后，用chrome浏览网站，可以在charles中看到请求：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_3.png&quot; alt=&quot;request&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/charles_4.png&quot; alt=&quot;map local&quot;&gt;&lt;/p&gt;
+&lt;p&gt;替换之后可以写一些测试语句看是否生效&lt;br&gt;接下来 就可以做你爱做的事情啦&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有位射鸡湿朋友要给个已上线的网站改样式文件，想用最简单快速见效的方式，于是写一篇教程。&lt;/p&gt;
+&lt;h4 id=&quot;软件介绍：&quot;&gt;&lt;a href=&quot;#软件介绍：&quot; class=&quot;headerlink&quot; title=&quot;软件介绍：&quot;&gt;&lt;/a&gt;软件介绍：&lt;/h4&gt;&lt;p&gt;Charles
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://zoexx.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http2.0</title>
+    <link href="http://zoexx.github.io/2016/05/07/http2-0/"/>
+    <id>http://zoexx.github.io/2016/05/07/http2-0/</id>
+    <published>2016-05-07T09:37:01.000Z</published>
+    <updated>2016-05-09T15:54:35.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;40% of surveyed online shoppers will abandon a page that takes more than 3 seconds to load.— Akamai&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;百分之四十参与调查的网购用户会放弃一个加载超过3秒的页面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Adding half a second to a search results page can decrease traffic and ad revenues by 20%— Google&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搜索结果页面每延迟半秒，广告和流量收入减少20%&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Speeding up a fundraising site by 60% increased donations by 14%.— Obama Campaign&lt;/p&gt;
+&lt;p&gt;Every additional 100 milliseconds of load time decreased sales by 1%.— Amazon&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;页面加载时间每增加100毫秒销售额就减少1％&lt;/p&gt;
+&lt;p&gt;－－－－－－－－－－－－－－－－－－－－－&lt;/p&gt;
+&lt;p&gt;－－－ The Faster The Better －－－－－&lt;/p&gt;
+&lt;p&gt;我们需要在各个环节去优化web的性能，让它快，更快&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;40% of surveyed online shoppers will abandon a page that takes more than 3 seconds to load.— Akamai&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;百分之
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://zoexx.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>天花板</title>
+    <link href="http://zoexx.github.io/2016/05/07/time-vs-ceiling/"/>
+    <id>http://zoexx.github.io/2016/05/07/time-vs-ceiling/</id>
+    <published>2016-05-07T04:47:53.000Z</published>
+    <updated>2016-05-09T05:07:50.000Z</updated>
+    
+    <content type="html">&lt;p&gt;人啊，是有三六九等，天赋，差异。虽说如今大可放开手去尝试自己想做的事情，也要看是否够得着门槛，是否能争取到入门的机会。&lt;/p&gt;
+&lt;p&gt;最近玩辐射避难所，它的天赋系统十分贴近现实，大多数的人天赋平平，要在合适的岗位上发挥更大的作用需要穿戴加成的装备，并且，接下来的时间，都会在这个岗位上度过，即使去训练室加点，也是去提高原本相对较高的天赋。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/IMG_0853.PNG&quot; alt=&quot;Fallout shelter&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/IMG_0854.PNG&quot; alt=&quot;Fallout shelter&quot;&gt;&lt;/p&gt;
+&lt;p&gt;主程说他从腾讯出来后去了一家金融公司，但也只是做一些业务的实现，而设计系统核心的一波人，全是海归常春藤，名校博士。&lt;/p&gt;
+&lt;p&gt;听过主程的经历，不禁想象自己的天花板，他很优秀我自愧不如，天花板不远了。&lt;/p&gt;
+&lt;p&gt;这真是个令人沮丧的结论。&lt;/p&gt;
+&lt;p&gt;一年前，我希望三年的时间内能成为一名合格的前端，至少完全满足招聘上写的3-5年经验要求的所有条目。&lt;/p&gt;
+&lt;p&gt;那么，之后呢？&lt;/p&gt;
+&lt;p&gt;积累一些开源项目？&lt;/p&gt;
+&lt;p&gt;深造吧，试试在职研究生？&lt;/p&gt;
+&lt;p&gt;发展第二职业，试试做交互设计？&lt;/p&gt;
+&lt;p&gt;还是要严格要求自己呀。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;人啊，是有三六九等，天赋，差异。虽说如今大可放开手去尝试自己想做的事情，也要看是否够得着门槛，是否能争取到入门的机会。&lt;/p&gt;
+&lt;p&gt;最近玩辐射避难所，它的天赋系统十分贴近现实，大多数的人天赋平平，要在合适的岗位上发挥更大的作用需要穿戴加成的装备，并且，接下来的时间，都会在
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://zoexx.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记一件小事</title>
     <link href="http://zoexx.github.io/2016/05/02/what-do-u-worry-about/"/>
     <id>http://zoexx.github.io/2016/05/02/what-do-u-worry-about/</id>
     <published>2016-05-01T16:16:34.000Z</published>
-    <updated>2016-05-01T17:21:09.000Z</updated>
+    <updated>2016-05-12T11:14:05.000Z</updated>
     
     <content type="html">&lt;p&gt;4月28号，写完交接文档，我们删除了各自电脑中的资料，办理离职。&lt;/p&gt;
 &lt;p&gt;早在一周前的炭工烧烤，就知道这么一天不远了，离开时还是很难受。&lt;/p&gt;
 &lt;p&gt;看到neal从财务出来直接去了洗手间，我想他的心情是很复杂的。&lt;/p&gt;
 &lt;p&gt;一年半，眼睁睁看着这家公司由几个人到上百号人到二十来人又到如今，连自己都要离开。&lt;/p&gt;
-&lt;p&gt;一年半，39个工程，520个commit，好多个加班的深夜。&lt;/p&gt;
-&lt;p&gt;伴随着这一年半的还有丁记烩面，湖南大碗菜，兰州拉面，黄焖鸡，客家菜….天天说吃腻了可还是外卖首选的好运。&lt;/p&gt;
+&lt;p&gt;一年半，39个工程，几经迁移的gitlab正好停留在520个commit，还有好多个加班的深夜。&lt;/p&gt;
+&lt;p&gt;伴随着这一年半的还有丁记烩面，湖南大碗菜，兰州拉面，黄焖鸡，客家菜….天天说吃腻了可还是外卖首选的好运。&lt;/p&gt;
 &lt;p&gt;我问neal，这像不像毕业前夕，我们收拾各自的行李，然后陆续离开。&lt;/p&gt;
 &lt;p&gt;neal回，又不是第一次了。&lt;/p&gt;
 &lt;p&gt;好的吧，你不是第一次，可是你也会忍不住难过。&lt;/p&gt;
