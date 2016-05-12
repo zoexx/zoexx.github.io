@@ -204,7 +204,7 @@
     <link href="http://zoexx.github.io/2016/01/08/vue-filter/"/>
     <id>http://zoexx.github.io/2016/01/08/vue-filter/</id>
     <published>2016-01-07T17:11:17.000Z</published>
-    <updated>2016-05-01T16:14:01.000Z</updated>
+    <updated>2016-05-12T12:04:52.000Z</updated>
     
     <content type="html">&lt;p&gt;今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏&lt;br&gt;写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码&lt;br&gt;而且可以动态修改数据来修改筛选栏&lt;br&gt;来一张截图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/re_write_filter.png&quot; alt=&quot;vue-filter&quot;&gt;&lt;/p&gt;
@@ -227,6 +227,8 @@
     
     </summary>
     
+    
+      <category term="vue" scheme="http://zoexx.github.io/tags/vue/"/>
     
   </entry>
   
@@ -404,7 +406,7 @@
     <link href="http://zoexx.github.io/2015/12/26/Resume-appendix-about-Front-end-separation/"/>
     <id>http://zoexx.github.io/2015/12/26/Resume-appendix-about-Front-end-separation/</id>
     <published>2015-12-26T15:43:13.000Z</published>
-    <updated>2015-12-28T16:27:57.000Z</updated>
+    <updated>2016-05-12T12:04:02.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;MVCC-MVC-MVVC…&quot;&gt;&lt;a href=&quot;#MVCC-MVC-MVVC…&quot; class=&quot;headerlink&quot; title=&quot;MVCC MVC MVVC…&quot;&gt;&lt;/a&gt;MVCC MVC MVVC…&lt;/h3&gt;&lt;p&gt;看着5月在学校里写的简历中有一句对实习做的项目描述：“采用MVCC设计思路，尽量将前后端分离….”。&lt;br&gt;😓着实给自己捏了一把汗，那时对mvc的理解大概是model负责数据逻辑，view负责展示界面，controller负责业务逻辑，认为后端从controller吐出jsp“页面”，完成了一次 M - C - V ,我在页面中的处理，控制交互和数据的展示又是一层control，于是写下了MVCC这个自创的词汇😓。&lt;br&gt;现在的理解是：&lt;b&gt;MV＊是一种分层的思路，是业务需求催生出来的产物，C把M和V解耦，把UI逻辑与数据业务逻辑分离。&lt;/b&gt;&lt;br&gt;对于后台接口来说更多是控制增删查改的过程，关乎数据结构的设计，关乎数据的关联。&lt;br&gt;当然接口不会去考虑为啥用户要这样输入，要那样阅读，要点击打开，要滑动翻页，要缩放，还要3Dtouch。&lt;br&gt;前端的价值更凸显在同用户打交道，还原设计，交互，追求更好的浏览体验。&lt;br&gt;MVVC第二个V是viewModel，可复用的视图模块，这里要说到数据的双向绑定，处理用户输入模块时，对此处理解更深刻，比如，为了方面维护，我用一个弹窗去实现预约单的增删改查，接触到vue.js之后呢，事情就变得十分清晰了。&lt;/p&gt;
 &lt;figure class=&quot;highlight 1c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//此处应该有代码对比&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -443,8 +445,6 @@
     </summary>
     
     
-      <category term="Resume appendix" scheme="http://zoexx.github.io/tags/Resume-appendix/"/>
-    
   </entry>
   
   <entry>
@@ -452,7 +452,7 @@
     <link href="http://zoexx.github.io/2015/12/06/a-song/"/>
     <id>http://zoexx.github.io/2015/12/06/a-song/</id>
     <published>2015-12-06T12:03:43.000Z</published>
-    <updated>2015-12-27T12:51:57.000Z</updated>
+    <updated>2016-05-12T12:04:08.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xndda.com1.z0.glb.clouddn.com/orange.jpg&quot; alt=&quot;orange -benjamin&quot;&gt;&lt;/p&gt;
 &lt;embed src=&quot;http://www.xiami.com/widget/0_1769276716,_460_360_CD5C5C_808080_1/multiPlayer.swf&quot; type=&quot;application/x-shockwave-flash&quot; width=&quot;320&quot; height=&quot;93&quot; wmode=&quot;transparent&quot; title=&quot;Adobe Flash Player&quot;&gt;
@@ -465,8 +465,6 @@
     
     </summary>
     
-    
-      <category term="test" scheme="http://zoexx.github.io/tags/test/"/>
     
   </entry>
   
@@ -499,7 +497,7 @@
     <link href="http://zoexx.github.io/2015/07/24/New-Post/"/>
     <id>http://zoexx.github.io/2015/07/24/New-Post/</id>
     <published>2015-07-23T16:58:03.000Z</published>
-    <updated>2015-12-27T16:30:26.000Z</updated>
+    <updated>2016-05-12T12:04:27.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;I-M-S-T-D&quot;&gt;&lt;a href=&quot;#I-M-S-T-D&quot; class=&quot;headerlink&quot; title=&quot;I.M.S.T.D&quot;&gt;&lt;/a&gt;I.M.S.T.D&lt;/h2&gt;&lt;p&gt;时常感觉疲惫，以对自己的了解，无非就是少了点新的刺激。&lt;/p&gt;
 </content>
@@ -511,8 +509,6 @@
     
     </summary>
     
-    
-      <category term="test" scheme="http://zoexx.github.io/tags/test/"/>
     
   </entry>
   
