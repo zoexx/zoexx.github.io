@@ -79,3 +79,23 @@
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </section>
 <% } %>
+
+<% if (!index && config.gitment ) { %>
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+<% } %>
+
