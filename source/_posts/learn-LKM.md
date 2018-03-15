@@ -59,3 +59,7 @@ tags: linux
 |virtio                | 14959 |  5 virtio_blk,virtio_net,virtio_pci,virtio_balloon,virtio_console|
 |i2c_core              | 40756 |  3 drm,i2c_piix4,drm_kms_helper|
 |floppy                | 69417 |  0 |
+
+
+
+- 未完待续
