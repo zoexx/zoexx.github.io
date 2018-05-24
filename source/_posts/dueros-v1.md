@@ -17,7 +17,7 @@ tags: linux dueros
 
 ![1512462354443027445.jpg](http://boscdn.bpc.baidu.com/v1/developer/1512462354443027445.jpg)
 
-刷镜像这一步就不啰嗦了，请参考官方说明。
+刷镜像这一步就不啰嗦了，请参考[官方说明](https://developer.dueros.baidu.com/doc/device-devkit/intro_markdown)。
 
 刷好镜像之后改wifi配置（此时依然是用电脑打开tf卡的目录）：
 
