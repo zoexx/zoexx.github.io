@@ -69,7 +69,7 @@ theme: yilia
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/zoexx/zoexx.github.io.git
+  repository: git@github.com:zoexx/zoexx.github.io.git
   branch: master
   message: hexo deploy
 
@@ -78,4 +78,4 @@ backup:
     type: git
     message: update source
     repository:
-       github: https://github.com/zoexx/zoexx.github.io.git,backup
+       github: git@github.com:zoexx/zoexx.github.io.git,backup
