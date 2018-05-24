@@ -210,7 +210,14 @@ Can't open "plughw:1,0" PCM device. No such file or directory
 
 okay，下一步是用pythonSDK修改唤词。
 
+补充三个指令
 
+```bash
+sudo systemctl stop duer
+sudo systemctl start duer
+sudo systemctl disable duer
+sudo systemctl enable duer
+```
 
 Ps:
 
