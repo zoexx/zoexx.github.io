@@ -7,7 +7,7 @@ tags: vue
 而且可以动态修改数据来修改筛选栏
 来一张截图
 
-![vue-filter](http://7xndda.com1.z0.glb.clouddn.com/re_write_filter.png)
+![vue-filter](http://cdn.zoeservers.com/re_write_filter.png)
 
 由直接操作DOM转为直接操作数据
 

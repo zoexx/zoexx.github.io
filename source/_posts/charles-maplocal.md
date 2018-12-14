@@ -27,19 +27,19 @@ Charles 是一款Mac上的HTTP代理服务器、HTTP监视器、反向代理服�
 
 系统偏好设置 > 网络 > 高级…(正在使用的网络) > 代理 > Web代理（HTTP）
 
-![set proxy](http://7xndda.com1.z0.glb.clouddn.com/charles_1.png)
+![set proxy](http://cdn.zoeservers.com/charles_1.png)
 
 如果使用ss需要经常切换代理，可以使用一款chrome的插件 [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN)
 
-![Proxy SwitchyOmega](http://7xndda.com1.z0.glb.clouddn.com/charles_2.png)
+![Proxy SwitchyOmega](http://cdn.zoeservers.com/charles_2.png)
 
 #### 2.Map Local
 
 设置好代理之后，用chrome浏览网站，可以在charles中看到请求：
 
-![request](http://7xndda.com1.z0.glb.clouddn.com/charles_3.png)
+![request](http://cdn.zoeservers.com/charles_3.png)
 
-![map local](http://7xndda.com1.z0.glb.clouddn.com/charles_4.png)
+![map local](http://cdn.zoeservers.com/charles_4.png)
 
 
 替换之后可以写一些测试语句看是否生效

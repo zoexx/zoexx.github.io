@@ -7,8 +7,8 @@ tags: life
 
 最近玩辐射避难所，它的天赋系统十分贴近现实，大多数的人天赋平平，要在合适的岗位上发挥更大的作用需要穿戴加成的装备，并且，接下来的时间，都会在这个岗位上度过，即使去训练室加点，考虑到时间成本，优先提高原本相对较高的天赋，那也就意味着，会一直安排这个人从事同样的工作直到在某个时间段有天赋点更高的人来代替这个岗位。
 
-![Fallout shelter](http://7xndda.com1.z0.glb.clouddn.com/IMG_0853.PNG)
-![Fallout shelter](http://7xndda.com1.z0.glb.clouddn.com/IMG_0854.PNG)
+![Fallout shelter](http://cdn.zoeservers.com/IMG_0853.PNG)
+![Fallout shelter](http://cdn.zoeservers.com/IMG_0854.PNG)
 
 主程说他从腾讯出来后去了一家金融公司，但也只是做一些业务的实现，而设计系统核心的一波人，全是海归常春藤，名校博士。
 

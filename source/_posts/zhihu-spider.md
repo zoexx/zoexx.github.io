@@ -100,7 +100,7 @@ phantom.onError = function(msg, trace) {
 };
 ```
 
-![运行时的截图](http://7xndda.com1.z0.glb.clouddn.com/zhihu.gif)
+![运行时的截图](http://cdn.zoeservers.com/zhihu.gif)
 
 要的数据都已经抓好啦，下一步用nodejs改一下标题，转换成csv文件方便运营同学用excel做分析，其实改标题也可以在phantomjs里面完成。
 
@@ -117,7 +117,7 @@ fs.writeFile( filetitle , JSON.stringify( result ) , 'utf8' , function(err){
 
 ```
 
-![导出的文件截图](http://7xndda.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20170523162357.png)
+![导出的文件截图](http://cdn.zoeservers.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20170523162357.png)
 
 打算丢给运营同学用神箭手自己去玩 : )
 
