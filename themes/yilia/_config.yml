@@ -7,9 +7,9 @@ menu:
 # SubNav
 subnav:
   github: "http://zoexx.github.io/"
-  weibo: "http://www.weibo.com/u/2170184935"
+  #weibo: "http://www.weibo.com/u/2170184935"
   rss: "/atom.xml"
-  zhihu: "http://www.zhihu.com/people/ying-xiao-xiao-42"
+  #zhihu: "http://www.zhihu.com/people/ying-xiao-xiao-42"
   #douban: "#"
   #mail: "#"
   #facebook: "#"
@@ -32,10 +32,10 @@ open_in_new: false
 
 # Miscellaneous
 #google_analytics: ''
-favicon: http://7xndda.com1.z0.glb.clouddn.com/favicon.png
+favicon: http://cdn.zoeservers.com/favicon.png
 
 #你的头像url
-avatar: http://7xndda.com1.z0.glb.clouddn.com/myMarioBlue.jpg
+avatar: http://cdn.zoeservers.com/myMarioBlue.jpg
 #是否开启分享
 share: true
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
