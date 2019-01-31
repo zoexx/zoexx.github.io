@@ -35,6 +35,8 @@ tags: git
 
 ![status](http://cdn.zoeservers.com/md-art/08.png)
 
+查看五个区的扭转关系👉[http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;](http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;)
+
 ## 使用git
 
 - git的命令行指令
