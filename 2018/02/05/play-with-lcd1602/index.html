@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>play_with_lcd1602 | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="给树莓派配一块显示屏 lcd1602
+lcd的说明书百度百科上也写的比较详细，有了wiringPi的封装，我们只需要接好线，调用wiringpi提供的方法即可。
+wiringPi官网上有案例指导👉直达链接。
+需要注意的是示意图中的树莓派与3B+的GPIO数量不一样，白线连的是输入电压5V，依次往左推。
+
+另外，wiringPi使用的是针脚编号，以下奉上一张对比图。
+
+电位器是用来调节屏幕对比度，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="play_with_lcd1602">
+<meta property="og:url" content="http://zoexx.github.io/2018/02/05/play-with-lcd1602/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="给树莓派配一块显示屏 lcd1602
+lcd的说明书百度百科上也写的比较详细，有了wiringPi的封装，我们只需要接好线，调用wiringpi提供的方法即可。
+wiringPi官网上有案例指导👉直达链接。
+需要注意的是示意图中的树莓派与3B+的GPIO数量不一样，白线连的是输入电压5V，依次往左推。
+
+另外，wiringPi使用的是针脚编号，以下奉上一张对比图。
+
+电位器是用来调节屏幕对比度，">
+<meta property="og:image" content="http://cdn.zoeservers.com/IMG_0991_Lively.gif">
+<meta property="og:image" content="http://cdn.zoeservers.com/lcd4_bb.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/rpi-pins-40-0.png">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.632Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="play_with_lcd1602">
+<meta name="twitter:description" content="给树莓派配一块显示屏 lcd1602
+lcd的说明书百度百科上也写的比较详细，有了wiringPi的封装，我们只需要接好线，调用wiringpi提供的方法即可。
+wiringPi官网上有案例指导👉直达链接。
+需要注意的是示意图中的树莓派与3B+的GPIO数量不一样，白线连的是输入电压5V，依次往左推。
+
+另外，wiringPi使用的是针脚编号，以下奉上一张对比图。
+
+电位器是用来调节屏幕对比度，">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-play-with-lcd1602" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/05/play-with-lcd1602/" class="article-date">
+  	<time datetime="2018-02-05T09:10:29.000Z" itemprop="datePublished">2018-02-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      play_with_lcd1602
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/raspberry/">raspberry</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="给树莓派配一块显示屏-lcd1602"><a href="#给树莓派配一块显示屏-lcd1602" class="headerlink" title="给树莓派配一块显示屏 lcd1602"></a>给树莓派配一块显示屏 lcd1602</h1><p><img src="http://cdn.zoeservers.com/IMG_0991_Lively.gif" alt="显示xrpusdt的价格"></p>
+<p><a href="https://baike.baidu.com/item/1602%E5%AD%97%E7%AC%A6%E6%B6%B2%E6%99%B6/6103144?fr=aladdin" target="_blank" rel="external">lcd的说明书</a>百度百科上也写的比较详细，有了wiringPi的封装，我们只需要接好线，调用wiringpi提供的方法即可。</p>
+<p>wiringPi官网上有案例指导👉<a href="http://wiringpi.com/dev-lib/lcd-library/" target="_blank" rel="external">直达链接</a>。</p>
+<p>需要注意的是示意图中的树莓派与3B+的GPIO数量不一样，白线连的是输入电压5V，依次往左推。</p>
+<p><img src="http://cdn.zoeservers.com/lcd4_bb.png" alt="接线示意图"></p>
+<p>另外，wiringPi使用的是针脚编号，以下奉上一张对比图。</p>
+<p><img src="http://cdn.zoeservers.com/rpi-pins-40-0.png" alt="树莓派GPIO编号"></p>
+<p>电位器是用来调节屏幕对比度，如果像我一样没有电位器的朋友也可以用电阻替代。</p>
+<p>我使用了2kΩ的电阻接地👇</p>
+<p>V0======2kΩ=======GND</p>
+<p>第一次通电之后，lcd1602会显示上面一排黑色下面一排白色，这是它在初始化，莫慌。</p>
+<p>|<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>|</p>
+<p>| ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ ▇ |</p>
+<p>|<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>|</p>
+<p>接好线之后可以使用wiringpi提供的测试代码跑一跑，出现字母数字之类，就已经算ok了。</p>
+<p>以下是一段简单的打印文件内容的c代码。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;wiringPi.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;lcd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> args, <span class="keyword">char</span> *argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (wiringPiSetup () == -<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"some thing wrong!"</span>);</span><br><span class="line">       <span class="built_in">exit</span> (<span class="number">1</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> fd = lcdInit (<span class="number">2</span>, <span class="number">16</span>, <span class="number">4</span>,  <span class="number">11</span>,<span class="number">10</span> , <span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>) ;</span><br><span class="line">    <span class="keyword">if</span> (fd == -<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span> (<span class="string">"lcdInit 1 failed\n"</span>) ;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    sleep (<span class="number">1</span>) ; <span class="comment">//显示屏初始化</span></span><br><span class="line"></span><br><span class="line">    FILE *fp;</span><br><span class="line">    <span class="keyword">char</span> Body[<span class="number">32</span>]; </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        fp=fopen(<span class="string">"./bid.txt"</span>,<span class="string">"r"</span>);</span><br><span class="line">        fgets(Body,<span class="number">32</span>,fp);</span><br><span class="line">        fclose(fp);</span><br><span class="line"></span><br><span class="line">        lcdClear (fd);</span><br><span class="line">        lcdPosition (fd, <span class="number">0</span>, <span class="number">0</span>) ;</span><br><span class="line">        lcdPuts(fd , Body);</span><br><span class="line">        </span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc lcd_printer.c -o lcd_printer -lwiringPi -lwiringPiDev</span><br></pre></td></tr></table></figure>
+<p>bid.txt中的内容来自我用python抓回来的数据。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B 0.7970 : 00078S 0.7996 : 5759.0</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/13/learn-LKM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          认识 LKM
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/29/qshell-upload/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">qshell_upload</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

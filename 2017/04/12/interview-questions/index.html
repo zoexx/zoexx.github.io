@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>考验基础的面试题 | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="偶然看到一篇解析面试题目的文章，考验了javascript的函数，变量，属性，原型对象，优先级等要点。
+有同行认为这在实战中没有用到，不用理解，甚至认为是脑筋急转弯，我并不认同这样的观点，在实际调试，理解程序的过程中，对于这些写法的误解或是一知半解极易把自己带入坑。
+123456789101112131415161718192021222324function Foo() &amp;#123;    ge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考验基础的面试题">
+<meta property="og:url" content="http://zoexx.github.io/2017/04/12/interview-questions/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="偶然看到一篇解析面试题目的文章，考验了javascript的函数，变量，属性，原型对象，优先级等要点。
+有同行认为这在实战中没有用到，不用理解，甚至认为是脑筋急转弯，我并不认同这样的观点，在实际调试，理解程序的过程中，对于这些写法的误解或是一知半解极易把自己带入坑。
+123456789101112131415161718192021222324function Foo() &amp;#123;    ge">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="考验基础的面试题">
+<meta name="twitter:description" content="偶然看到一篇解析面试题目的文章，考验了javascript的函数，变量，属性，原型对象，优先级等要点。
+有同行认为这在实战中没有用到，不用理解，甚至认为是脑筋急转弯，我并不认同这样的观点，在实际调试，理解程序的过程中，对于这些写法的误解或是一知半解极易把自己带入坑。
+123456789101112131415161718192021222324function Foo() &amp;#123;    ge">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-interview-questions" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/12/interview-questions/" class="article-date">
+  	<time datetime="2017-04-12T09:32:31.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      考验基础的面试题
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>偶然看到一篇解析面试题目的文章，考验了javascript的函数，变量，属性，原型对象，优先级等要点。</p>
+<p>有同行认为这在实战中没有用到，不用理解，甚至认为是脑筋急转弯，我并不认同这样的观点，在实际调试，理解程序的过程中，对于这些写法的误解或是一知半解极易把自己带入坑。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">1</span>); &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">Foo.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">2</span>);&#125;;</span><br><span class="line">Foo.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">3</span>);&#125;;</span><br><span class="line"><span class="keyword">var</span> getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">4</span>);&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="number">5</span>);&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//请写出以下输出结果：</span></span><br><span class="line">Foo.getName();</span><br><span class="line"><span class="comment">// 2 访问公有属性</span></span><br><span class="line">getName();</span><br><span class="line"><span class="comment">// 4 window.getName()</span></span><br><span class="line">Foo().getName();</span><br><span class="line"><span class="comment">// 1 window.getName()</span></span><br><span class="line">getName();</span><br><span class="line"><span class="comment">// 1 window.getName()</span></span><br><span class="line"><span class="keyword">new</span> Foo.getName();</span><br><span class="line"><span class="comment">// 2 访问公有属性</span></span><br><span class="line"><span class="keyword">new</span> Foo().getName();</span><br><span class="line"><span class="comment">// 1 (new Foo()).getName()</span></span><br><span class="line"><span class="keyword">new</span> <span class="keyword">new</span> Foo().getName();</span><br><span class="line"><span class="comment">// 3 new (new Foo()).getName()</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://www.codeceo.com/article/one-javascript-interview.html" target="_blank" rel="external">原文中有详细解释</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/23/zhihu-spider/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          phantomjs nodejs 爬数据
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/07/redpack-activity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">红包活动</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

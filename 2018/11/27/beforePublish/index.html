@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>在发布之前的检查清单 | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="每一个前端项目发布前的检查清单
+
+
+fix lint 保持代码合乎 规范
+run build &amp;amp; Analyzer 检查代码中的依赖项，尽可能的 按需引入
+静态资源开启gzip
+视情况 引入前端错误&amp;amp;性能监控
+SEO优化项：
+
+使用 a tag (router-link in vue) 代替 js写的跳转
+合理使用html标签，不要全是div
+合理设置index.html 中 ke">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在发布之前的检查清单">
+<meta property="og:url" content="http://zoexx.github.io/2018/11/27/beforePublish/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="每一个前端项目发布前的检查清单
+
+
+fix lint 保持代码合乎 规范
+run build &amp;amp; Analyzer 检查代码中的依赖项，尽可能的 按需引入
+静态资源开启gzip
+视情况 引入前端错误&amp;amp;性能监控
+SEO优化项：
+
+使用 a tag (router-link in vue) 代替 js写的跳转
+合理使用html标签，不要全是div
+合理设置index.html 中 ke">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.622Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在发布之前的检查清单">
+<meta name="twitter:description" content="每一个前端项目发布前的检查清单
+
+
+fix lint 保持代码合乎 规范
+run build &amp;amp; Analyzer 检查代码中的依赖项，尽可能的 按需引入
+静态资源开启gzip
+视情况 引入前端错误&amp;amp;性能监控
+SEO优化项：
+
+使用 a tag (router-link in vue) 代替 js写的跳转
+合理使用html标签，不要全是div
+合理设置index.html 中 ke">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-beforePublish" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/11/27/beforePublish/" class="article-date">
+  	<time datetime="2018-11-27T06:06:43.000Z" itemprop="datePublished">2018-11-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在发布之前的检查清单
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>每一个前端项目发布前的检查清单</p>
+</blockquote>
+<ol>
+<li>fix lint 保持代码合乎 <strong>规范</strong></li>
+<li>run build &amp; Analyzer 检查代码中的依赖项，尽可能的 <strong>按需引入</strong></li>
+<li>静态资源开启gzip</li>
+<li>视情况 引入前端错误&amp;性能监控</li>
+<li><p>SEO优化项：</p>
+<ul>
+<li>使用 a tag (router-link in vue) 代替 js写的跳转</li>
+<li>合理使用html标签，不要全是div</li>
+<li>合理设置index.html 中 keywords, description 的内容</li>
+</ul>
+</li>
+<li><p>检查meta标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="value">"IE=edge,chrome=1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 👇针对内核浏览器优先使用“急速”模式 文档-&gt; http://se.360.cn/v6/help/meta.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"renderer"</span> <span class="attribute">content</span>=<span class="value">"webkit|ie-comp|ie-stand"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 👇禁止缩放 wkwebview中会失效 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 👇禁止百度转码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"Cache-Control"</span> <span class="attribute">content</span>=<span class="value">"no-siteapp"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级浏览器的代码</p>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">strong</span>&gt;</span>We're sorry but our site doesn't work properly without JavaScript enabled. Please enable it to continue.<span class="tag">&lt;/<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">noscript</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;&lt;div class="alert alert-danger topframe" role="alert"&gt;你的浏览器实在&lt;strong&gt;太太太太太太旧了&lt;/strong&gt;，放学别走，升级完浏览器再说 &lt;a target="_blank" class="alert-link" href="http://browsehappy.com"&gt;立即升级&lt;/a&gt;&lt;/div&gt;&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>加入webpack打包时间方便排除缓存错误</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log('update date =&gt; $&#123;new Date()&#125;');</span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li><p>修改favicon.ico</p>
+</li>
+<li><p>本地起一个静态服，使用chrome edge ie11，测试打好包的代码， 如果有单元测试可以跑一下</p>
+</li>
+<li><p>在readme中补充发布，变更记录</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/16/fantasy/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          使命感与想象力
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/21/coverage/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用chrome 精简多余的css和js</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

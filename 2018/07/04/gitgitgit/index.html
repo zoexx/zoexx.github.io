@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git指北 | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="整理自7月在公司的分享
+
+❤Gitwhy git查看修改历史
+查看分支情况
+查看谁改了哪一行
+分布式版本控制
+
+分布式版本控制系统
+以commit为单位恢复到某一个版本
+基于每一个文件每一行的跟踪
+分支，多人协作
+超快的速度和超大的数据量
+
+理解git中文件的状态标识
+git的”五”个区
+查看五个区的扭转关系👉http://ndpsoftware.com/git-cheatsheet.html#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git指北">
+<meta property="og:url" content="http://zoexx.github.io/2018/07/04/gitgitgit/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="整理自7月在公司的分享
+
+❤Gitwhy git查看修改历史
+查看分支情况
+查看谁改了哪一行
+分布式版本控制
+
+分布式版本控制系统
+以commit为单位恢复到某一个版本
+基于每一个文件每一行的跟踪
+分支，多人协作
+超快的速度和超大的数据量
+
+理解git中文件的状态标识
+git的”五”个区
+查看五个区的扭转关系👉http://ndpsoftware.com/git-cheatsheet.html#">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/01.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/02.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/03.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/04.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/06.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/08.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/05.png">
+<meta property="og:image" content="http://cdn.zoeservers.com/md-art/09.png">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.627Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git指北">
+<meta name="twitter:description" content="整理自7月在公司的分享
+
+❤Gitwhy git查看修改历史
+查看分支情况
+查看谁改了哪一行
+分布式版本控制
+
+分布式版本控制系统
+以commit为单位恢复到某一个版本
+基于每一个文件每一行的跟踪
+分支，多人协作
+超快的速度和超大的数据量
+
+理解git中文件的状态标识
+git的”五”个区
+查看五个区的扭转关系👉http://ndpsoftware.com/git-cheatsheet.html#">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-gitgitgit" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/04/gitgitgit/" class="article-date">
+  	<time datetime="2018-07-04T07:53:07.000Z" itemprop="datePublished">2018-07-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git指北
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>整理自7月在公司的分享</p>
+</blockquote>
+<h1 id="❤Git"><a href="#❤Git" class="headerlink" title="❤Git"></a>❤Git</h1><h2 id="why-git"><a href="#why-git" class="headerlink" title="why git"></a>why git</h2><h5 id="查看修改历史"><a href="#查看修改历史" class="headerlink" title="查看修改历史"></a>查看修改历史</h5><p><img src="http://cdn.zoeservers.com/md-art/01.png" alt="github desktop"></p>
+<h5 id="查看分支情况"><a href="#查看分支情况" class="headerlink" title="查看分支情况"></a>查看分支情况</h5><p><img src="http://cdn.zoeservers.com/md-art/02.png" alt="git gui"></p>
+<h5 id="查看谁改了哪一行"><a href="#查看谁改了哪一行" class="headerlink" title="查看谁改了哪一行"></a>查看谁改了哪一行</h5><p><img src="http://cdn.zoeservers.com/md-art/03.png" alt="git blame"></p>
+<h5 id="分布式版本控制"><a href="#分布式版本控制" class="headerlink" title="分布式版本控制"></a>分布式版本控制</h5><p><img src="http://cdn.zoeservers.com/md-art/04.png" alt="git server"></p>
+<ul>
+<li>分布式版本控制系统</li>
+<li>以commit为单位恢复到某一个版本</li>
+<li>基于每一个文件每一行的跟踪</li>
+<li>分支，多人协作</li>
+<li>超快的速度和超大的数据量</li>
+</ul>
+<h2 id="理解git中文件的状态标识"><a href="#理解git中文件的状态标识" class="headerlink" title="理解git中文件的状态标识"></a>理解git中文件的状态标识</h2><p><img src="http://cdn.zoeservers.com/md-art/06.png" alt="status"></p>
+<h2 id="git的”五”个区"><a href="#git的”五”个区" class="headerlink" title="git的”五”个区"></a>git的”五”个区</h2><p><img src="http://cdn.zoeservers.com/md-art/08.png" alt="status"></p>
+<p>查看五个区的扭转关系👉<a href="http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;" target="_blank" rel="external">http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;</a></p>
+<h2 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h2><ul>
+<li><p>git的命令行指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">λ git --help</span><br><span class="line">usage: git [--version] [--help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]</span><br><span class="line">           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]</span><br><span class="line">           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]</span><br><span class="line">           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]</span><br><span class="line">           &lt;<span class="built_in">command</span>&gt; [&lt;args&gt;]</span><br><span class="line"></span><br><span class="line">These are common Git commands used <span class="keyword">in</span> various situations:</span><br><span class="line"></span><br><span class="line">start a working area (see also: git <span class="built_in">help</span> tutorial)</span><br><span class="line">   <span class="built_in">clone</span>      Clone a repository into a new directory</span><br><span class="line">   init       Create an empty Git repository or reinitialize an existing one</span><br><span class="line"></span><br><span class="line">work on the current change (see also: git <span class="built_in">help</span> everyday)</span><br><span class="line">   add        Add file contents to the index</span><br><span class="line">   mv         Move or rename a file, a directory, or a symlink</span><br><span class="line">   reset      Reset current HEAD to the specified state</span><br><span class="line">   rm         Remove files from the working tree and from the index</span><br><span class="line"></span><br><span class="line">examine the <span class="built_in">history</span> and state (see also: git <span class="built_in">help</span> revisions)</span><br><span class="line">   bisect     Use binary search to find the commit that introduced a bug</span><br><span class="line">   grep       Print lines matching a pattern</span><br><span class="line">   <span class="built_in">log</span>        Show commit logs</span><br><span class="line">   show       Show various types of objects</span><br><span class="line">   status     Show the working tree status</span><br><span class="line"></span><br><span class="line">grow, mark and tweak your common <span class="built_in">history</span></span><br><span class="line">   branch     List, create, or delete branches</span><br><span class="line">   checkout   Switch branches or restore working tree files</span><br><span class="line">   commit     Record changes to the repository</span><br><span class="line">   diff       Show changes between commits, commit and working tree, etc</span><br><span class="line">   merge      Join two or more development histories together</span><br><span class="line">   rebase     Reapply commits on top of another base tip</span><br><span class="line">   tag        Create, list, delete or verify a tag object signed with GPG</span><br><span class="line"></span><br><span class="line">collaborate (see also: git <span class="built_in">help</span> workflows)</span><br><span class="line">   fetch      Download objects and refs from another repository</span><br><span class="line">   pull       Fetch from and integrate with another repository or a <span class="built_in">local</span> branch</span><br><span class="line">   push       Update remote refs along with associated objects</span><br><span class="line"></span><br><span class="line"><span class="string">'git help -a'</span> and <span class="string">'git help -g'</span> list available subcommands and some</span><br><span class="line">concept guides. See <span class="string">'git help &lt;command&gt;'</span> or <span class="string">'git help &lt;concept&gt;'</span></span><br><span class="line">to <span class="built_in">read</span> about a specific subcommand or concept.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>常用指令的补充</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看commit的变更</span></span><br><span class="line">$ git <span class="built_in">log</span> -p</span><br><span class="line"><span class="comment"># 查看变更行等数据统计</span></span><br><span class="line">$ git <span class="built_in">log</span> --stat</span><br><span class="line"><span class="comment"># 自定义输出样式 graph是带分支走势图的</span></span><br><span class="line">$ git <span class="built_in">log</span> --pretty=format:<span class="string">"%h %s"</span> --graph</span><br><span class="line"><span class="comment"># 补充一个修改到上一个commit</span></span><br><span class="line">$ git commit --amend</span><br><span class="line"><span class="comment"># 撤销CONTRIBUTING.md的上一次commit</span></span><br><span class="line">$ git reset HEAD CONTRIBUTING.md</span><br><span class="line"><span class="comment"># 撤销对CONTRIBUTING.md的修改</span></span><br><span class="line">$ git checkout -- CONTRIBUTING.md</span><br><span class="line"><span class="comment"># 新建一个分支</span></span><br><span class="line">$ git checkout -b hotfix</span><br><span class="line"><span class="comment"># 合并一个分支</span></span><br><span class="line">$ git merge hotfix</span><br><span class="line"><span class="comment"># 查看所有包含未合并工作的分支</span></span><br><span class="line">$ git branch --no-merged</span><br><span class="line"><span class="comment"># 推送一个分支到远程仓库</span></span><br><span class="line">$ git push [remote-name] [branch-name]</span><br><span class="line"><span class="comment"># 拉取远程仓库中所有分支的最新commit</span></span><br><span class="line">$ git pull --all</span><br><span class="line"><span class="comment"># 并不像提交一个commit 但是需要切换分支时 可以将工作区的修改储藏起来</span></span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
+<li><p>修改环境变量来跟踪git的运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ GIT_TRACE=<span class="literal">true</span> git lga</span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.877982</span> git.c:<span class="number">554</span>               trace: <span class="built_in">exec</span>: <span class="string">'git-lga'</span></span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.878369</span> run-command.c:<span class="number">341</span>       trace: run_<span class="built_in">command</span>: <span class="string">'git-lga'</span></span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.879529</span> git.c:<span class="number">282</span>               trace: <span class="built_in">alias</span> expansion: lga =&gt; <span class="string">'log'</span> <span class="string">'--graph'</span> <span class="string">'--pretty=oneline'</span> <span class="string">'--abbrev-commit'</span> <span class="string">'--decorate'</span> <span class="string">'--all'</span></span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.879885</span> git.c:<span class="number">349</span>               trace: built-in: git <span class="string">'log'</span> <span class="string">'--graph'</span> <span class="string">'--pretty=oneline'</span> <span class="string">'--abbrev-commit'</span> <span class="string">'--decorate'</span> <span class="string">'--all'</span></span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.899217</span> run-command.c:<span class="number">341</span>       trace: run_<span class="built_in">command</span>: <span class="string">'less'</span></span><br><span class="line"><span class="number">20</span>:<span class="number">12</span>:<span class="number">49.899675</span> run-command.c:<span class="number">192</span>       trace: <span class="built_in">exec</span>: <span class="string">'less'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用别名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.st status</span><br><span class="line">$ git st</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用git超强的统计</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计项目中commit数量前十的人</span></span><br><span class="line">$ git <span class="built_in">log</span> --pretty=%aN | sort | uniq -c | sort -k1 -n -r | head -n <span class="number">10</span></span><br><span class="line"><span class="comment"># 统计有多少个代码贡献者</span></span><br><span class="line">$ git <span class="built_in">log</span> --pretty=%aN | sort -u | wc <span class="operator">-l</span></span><br><span class="line"><span class="comment"># 统计某人的commit数量</span></span><br><span class="line">$ git <span class="built_in">log</span> --author=<span class="string">"<span class="variable">$(git config --get user.name)</span>"</span> --oneline | wc <span class="operator">-l</span></span><br><span class="line"><span class="comment"># 统计某人的代码行数</span></span><br><span class="line">git <span class="built_in">log</span> --author=<span class="string">"<span class="variable">$(git config --get user.name)</span>"</span> --pretty=tformat: --numstat | awk <span class="string">'&#123;adds += $1; subs += $2; all += $1 + $2&#125; END &#123;printf "added lines: %s removed lines : %s all lines: %s\n",adds,subs,all&#125;'</span></span><br><span class="line">added lines: <span class="number">2797109</span> removed lines : <span class="number">1886733</span> all lines: <span class="number">4683842</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="常见报错处理"><a href="#常见报错处理" class="headerlink" title="常见报错处理"></a>常见报错处理</h2><ul>
+<li>hint: Updates were rejected because the remote contains work that you do</li>
+<li>The following untracked working tree files would be overwritten by merge</li>
+<li>Your local changes to the following files would be overwritten by merge</li>
+<li>Your branch is ahead of ‘origin/master’ by 2 commits</li>
+<li>fatal: Unable to create ‘/path/my_proj/.git/index.lock’: File exists.</li>
+</ul>
+<h2 id="理解git工作原理的关键字"><a href="#理解git工作原理的关键字" class="headerlink" title="理解git工作原理的关键字"></a>理解git工作原理的关键字</h2><ul>
+<li>内容寻址（content-addressable）文件系统</li>
+<li>键值对数据库</li>
+<li>SHA-1 文件内容校验运算</li>
+<li>zlib压缩</li>
+<li>blob object , tree object , commit object , tag object</li>
+<li>快照</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'test content'</span> | git <span class="built_in">hash</span>-object -w --stdin</span><br><span class="line">d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br><span class="line"></span><br><span class="line">$ find .git/objects -type f</span><br><span class="line">.git/objects/d6/<span class="number">70460</span>b4b4aece5915caf5c68d12f560a9fe3e4</span><br><span class="line"></span><br><span class="line">$ git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br><span class="line"><span class="built_in">test</span> content</span><br></pre></td></tr></table></figure>
+<p><img src="http://cdn.zoeservers.com/md-art/05.png" alt="tree object"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'third commit'</span>  | git commit-tree <span class="number">3</span>c4e9c -p cac0cab</span><br><span class="line"><span class="number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9</span><br><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit <span class="number">1</span>a410efbd13591db07496601ebc7a059dd55cfe9</span><br><span class="line">Author: Scott Chacon &lt;schacon@gmail.com&gt;</span><br><span class="line">Date:   Fri May <span class="number">22</span> <span class="number">18</span>:<span class="number">15</span>:<span class="number">24</span> <span class="number">2009</span> -<span class="number">0700</span></span><br><span class="line"></span><br><span class="line">	third commit</span><br></pre></td></tr></table></figure>
+<ul>
+<li>.git 目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ls -F1</span><br><span class="line">HEAD            ---symbolic reference 指向目前所在的分支</span><br><span class="line">index           ---暂存区信息</span><br><span class="line">config*         ---配置选项</span><br><span class="line">description     ---仅供 GitWeb 程序使用</span><br><span class="line">hooks/          ---事件钩子，可以自定义脚本</span><br><span class="line">info/           ---global exclude,not <span class="keyword">in</span> .gitignore</span><br><span class="line">objects/        ---储存数据内容</span><br><span class="line">refs/           ---references 分支指向的commit object的key和remote reference</span><br></pre></td></tr></table></figure>
+<ul>
+<li>git add = 将被改写的文件保存为blob object，更新暂存区，记录tree object</li>
+<li>git commit = 创建一个指明了顶层tree object和父commit object</li>
+<li>git gc 打包，存储差异<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git gc</span><br><span class="line">Counting objects: <span class="number">18</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">8</span> threads.</span><br><span class="line">Compressing objects: <span class="number">100</span>% (<span class="number">14</span>/<span class="number">14</span>), done.</span><br><span class="line">Writing objects: <span class="number">100</span>% (<span class="number">18</span>/<span class="number">18</span>), done.</span><br><span class="line">Total <span class="number">18</span> (delta <span class="number">3</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="分支管理策略-git-flow"><a href="#分支管理策略-git-flow" class="headerlink" title="分支管理策略 git flow"></a>分支管理策略 git flow</h2><blockquote>
+<p>以单个功能点(feature)为最小单位做分支</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>主分支名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>master</td>
+<td>稳定线上版本分支</td>
+</tr>
+<tr>
+<td>develop</td>
+<td>稳定的开发分支，所有的新功能基于develop开始开发</td>
+</tr>
+<tr>
+<td>release</td>
+<td>上线版本</td>
+</tr>
+<tr>
+<td>hotfix</td>
+<td>紧急修复，修改线上问题，基于master分支，改完后merge到master和develop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-review"><a href="#code-review" class="headerlink" title="code review"></a>code review</h2><blockquote>
+<p>为提高代码质量，一般会使用code review机制</p>
+</blockquote>
+<p>什么时候触发一次review呢？</p>
+<h5 id="pull-request-（PR）"><a href="#pull-request-（PR）" class="headerlink" title="pull request （PR）"></a>pull request （PR）</h5><p>当你提交一个 Pull Request 的时候，你做的事情是 请求（request） 另一个开发者（比如项目维护者）来 拉取（pull） 你仓库中的一个分支到他们的仓库。也就是说你需要提供 4 个信息来完成一个 Pull Request：<strong>源仓库</strong>、<strong>源分支</strong>、<strong>目标仓库</strong>、<strong>目标分支</strong>。</p>
+<h5 id="git-flow-与-PR-在-gitlab-中的运用"><a href="#git-flow-与-PR-在-gitlab-中的运用" class="headerlink" title="git flow 与 PR 在 gitlab 中的运用"></a>git flow 与 PR 在 gitlab 中的运用</h5><ol>
+<li>settings&gt;repository&gt;protected branches 中设置需要权限才可以合并的分支 Master/Develop 等等根据实际情况使用</li>
+<li>每次一个feature或者hotfix开发完毕需要合并分支到M/D时 在gitlab中发起</li>
+<li>由reviewer检查修改点，如有问题可以在这个请求下评论，由发起人解决问题，没有问题之后合并分支</li>
+<li>删除已合并的分支</li>
+</ol>
+<p><img src="http://cdn.zoeservers.com/md-art/09.png" alt="new merge request"></p>
+<h5 id="合并分支的操作流程"><a href="#合并分支的操作流程" class="headerlink" title="合并分支的操作流程"></a>合并分支的操作流程</h5><p>例如将 featureA 合并到 develop<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># current featureA</span></span><br><span class="line"><span class="comment"># 拉取一下所有分支的修改</span></span><br><span class="line">git pull --all</span><br><span class="line"><span class="comment"># 将develop的最新修改拉到featureA检查一下有没有冲突，其实也可以直接在develop上合并featureA，这一步最好是pr提出方来做会提高效率，功能分支的改动需要关心主分支的进展</span></span><br><span class="line">git merge develop</span><br><span class="line"><span class="comment"># 解决冲突</span></span><br><span class="line">...</span><br><span class="line"><span class="comment"># 切换到develop合并已解决了冲突的featureA</span></span><br><span class="line">git checkout develop</span><br><span class="line">git merge featureA</span><br><span class="line"><span class="comment"># 提交</span></span><br><span class="line">git push origin develop</span><br><span class="line"><span class="comment"># 删除已合并的分支 保持clean</span></span><br><span class="line"><span class="comment"># local</span></span><br><span class="line">git branch <span class="operator">-d</span> featureA</span><br><span class="line"><span class="comment"># remote</span></span><br><span class="line">git push origin :featureA</span><br></pre></td></tr></table></figure></p>
+<h2 id="项目中使用gitlab的注意事项"><a href="#项目中使用gitlab的注意事项" class="headerlink" title="项目中使用gitlab的注意事项"></a>项目中使用gitlab的注意事项</h2><ul>
+<li>创建仓库，需要注意权限问题，最好是在group中创建一个project</li>
+<li>gitignore</li>
+<li>编写根目录的readme请指明部署相关的要点</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#20026;&#20102;&#26041;&#20415;&#36816;&#32500;&#26597;&#30475;&#30340;&#39033;&#30446;readme.md &#38656;&#35201;&#25552;&#21450;&#30340;&#37096;&#20998;&#10;&#10;### 1. &#39033;&#30446;&#20171;&#32461;&#10;&#10;### 2. &#39033;&#30446;&#22320;&#22336;&#10;&#10;- &#32447;&#19978;&#22320;&#22336;&#10;&#9;- &#27169;&#22359;&#19968;&#20837;&#21475;&#10;&#9;- &#27169;&#22359;&#20108;&#20837;&#21475;&#10;&#9;- &#27169;&#22359;&#19977;&#20837;&#21475;&#10;&#10;- &#27979;&#35797;&#29615;&#22659;&#22320;&#22336;&#10;&#10;### 3. &#37096;&#32626;&#35828;&#26126;&#10;&#10;&#29615;&#22659;A =&#62; &#20998;&#25903;A/xx&#10;&#29615;&#22659;B =&#62; &#20998;&#25903;B/xx&#10;&#10;- &#26500;&#24314;&#20195;&#30721;&#10;&#10;---```bash&#10;npm i &#10;npm run build&#10;---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>目录结构（准确描述需要放在服务器上的目录）<br><code>`</code></li>
+</ul>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><ul>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">中文版git book</a></li>
+<li><a href="https://desktop.github.com/" target="_blank" rel="external">超级简单好用的git可视化桌面程序 github desktop</a></li>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="external">git-flow 备忘清单</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/26/flutter-problems/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          flutter
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/20/my-git-flow/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用git flow</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue-filter | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码而且可以动态修改数据来修改筛选栏来一张截图
+
+由直接操作DOM转为直接操作数据
+
+做小螺管家app时 试图用react重写发现这个思路很有问题它试图将 多层级的data转换为扁平的domdata结构如下，这是后台惯用的多层级结构，而dom的结构是扁平的
+12345678910111">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-filter">
+<meta property="og:url" content="http://zoexx.github.io/2016/01/08/vue-filter/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码而且可以动态修改数据来修改筛选栏来一张截图
+
+由直接操作DOM转为直接操作数据
+
+做小螺管家app时 试图用react重写发现这个思路很有问题它试图将 多层级的data转换为扁平的domdata结构如下，这是后台惯用的多层级结构，而dom的结构是扁平的
+12345678910111">
+<meta property="og:image" content="http://cdn.zoeservers.com/re_write_filter.png">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.636Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-filter">
+<meta name="twitter:description" content="今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码而且可以动态修改数据来修改筛选栏来一张截图
+
+由直接操作DOM转为直接操作数据
+
+做小螺管家app时 试图用react重写发现这个思路很有问题它试图将 多层级的data转换为扁平的domdata结构如下，这是后台惯用的多层级结构，而dom的结构是扁平的
+12345678910111">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-vue-filter" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/08/vue-filter/" class="article-date">
+  	<time datetime="2016-01-07T17:11:17.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue-filter
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天利用vue的数据双向绑定重新写了一下列表页的多级联动筛选栏<br>写完感觉神清气爽，大概两百行代码 取代了之前多又杂的代码<br>而且可以动态修改数据来修改筛选栏<br>来一张截图</p>
+<p><img src="http://cdn.zoeservers.com/re_write_filter.png" alt="vue-filter"></p>
+<p>由直接操作DOM转为直接操作数据</p>
+<hr>
+<p>做小螺管家app时 试图用react重写<br>发现这个思路很有问题<br>它试图将 多层级的data转换为扁平的dom<br>data结构如下，这是后台惯用的多层级结构，而dom的结构是扁平的</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	"<span class="attribute">code</span>": <span class="value"><span class="number">0</span></span>,</span><br><span class="line">	"<span class="attribute">data</span>": <span class="value">[&#123;</span><br><span class="line">		"<span class="attribute">code</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">		"<span class="attribute">districtInfoList</span>": <span class="value">[&#123;</span><br><span class="line">			"<span class="attribute">areaInfos</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">44030601</span></span>,</span><br><span class="line">				"<span class="attribute">districtCode</span>": <span class="value"><span class="number">44030600</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"宝安中心区"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">44030600</span></span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"宝安区"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">areaInfos</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">44030902</span></span>,</span><br><span class="line">				"<span class="attribute">districtCode</span>": <span class="value"><span class="number">44030900</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"龙华"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">44030900</span></span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"龙华新区"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">areaInfos</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">44030509</span></span>,</span><br><span class="line">				"<span class="attribute">districtCode</span>": <span class="value"><span class="number">44030500</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"蛇口"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">44030500</span></span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"南山区"</span></span><br><span class="line">		</span>&#125;]</span>,</span><br><span class="line">		"<span class="attribute">metroLineInfoList</span>": <span class="value">[&#123;</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">			"<span class="attribute">metroStationInfoList</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">125</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"洪浪北"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">127</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"翻身"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">126</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"灵芝"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">128</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"宝安中心"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">116</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"五和"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">117</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">5</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"民治"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"环中线"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">4</span></span>,</span><br><span class="line">			"<span class="attribute">metroStationInfoList</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">93</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">4</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"上塘"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">94</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">4</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"红山"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">97</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">4</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"民乐"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"龙华线"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">2</span></span>,</span><br><span class="line">			"<span class="attribute">metroStationInfoList</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">56</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">2</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"水湾"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">52</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">2</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"登良"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">51</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">2</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"后海"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">54</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">2</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"湾厦"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"蛇口线"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">			"<span class="attribute">metroStationInfoList</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">25</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"宝体"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">27</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"西乡"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">20</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"大新"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">26</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"坪洲"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">18</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"深大"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">17</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"高新园"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">23</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"新安"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">28</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"固戍"</span></span><br><span class="line">			</span>&#125;, &#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">19</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"桃园"</span></span><br><span class="line">			</span>&#125;]</span>,</span><br><span class="line">			"<span class="attribute">name</span>": <span class="value"><span class="string">"罗宝线"</span></span><br><span class="line">		</span>&#125;, &#123;</span><br><span class="line">			"<span class="attribute">cityCode</span>": <span class="value"><span class="number">44030000</span></span>,</span><br><span class="line">			"<span class="attribute">code</span>": <span class="value"><span class="number">0</span></span>,</span><br><span class="line">			"<span class="attribute">metroStationInfoList</span>": <span class="value">[&#123;</span><br><span class="line">				"<span class="attribute">code</span>": <span class="value"><span class="number">0</span></span>,</span><br><span class="line">				"<span class="attribute">metroLineCode</span>": <span class="value"><span class="number">0</span></span>,</span><br><span class="line">				"<span class="attribute">name</span>": <span class="value"><span class="string">"在建地铁"</span></span><br><span class="line">			</span>&#125;]</span><br><span class="line">		</span>&#125;]</span>,</span><br><span class="line">		"<span class="attribute">name</span>": <span class="value"><span class="string">"深圳市"</span></span><br><span class="line">	</span>&#125;]</span>,</span><br><span class="line">	"<span class="attribute">msg</span>": <span class="value"><span class="string">"success"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>为了更通用 我将格式固定为如下<br>“title” 是标题栏<br>“n” means name 展示默认名称<br>“a” means active 展示选项内容<br>“content” 是 筛选的选项<br>“t” means title<br>“v” means value<br>“c” means context 存放下一级的选项</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "<span class="attribute">title</span>": <span class="value">[&#123;</span><br><span class="line">        "<span class="attribute">n</span>": <span class="value"><span class="string">"位置"</span></span>,</span><br><span class="line">        "<span class="attribute">a</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;, &#123;</span><br><span class="line">        "<span class="attribute">n</span>": <span class="value"><span class="string">"租金"</span></span>,</span><br><span class="line">        "<span class="attribute">a</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;, &#123;</span><br><span class="line">        "<span class="attribute">n</span>": <span class="value"><span class="string">"方式"</span></span>,</span><br><span class="line">        "<span class="attribute">a</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;, &#123;</span><br><span class="line">        "<span class="attribute">n</span>": <span class="value"><span class="string">"状态"</span></span>,</span><br><span class="line">        "<span class="attribute">a</span>": <span class="value"><span class="string">""</span></span><br><span class="line">    </span>&#125;]</span>,</span><br><span class="line">    "<span class="attribute">content</span>": <span class="value">[</span><br><span class="line">        [&#123;"<span class="attribute">t</span>":<span class="value"><span class="string">"区域"</span></span>&#125;,</span><br><span class="line">        &#123;"<span class="attribute">t</span>":<span class="value"><span class="string">"地铁"</span></span>&#125;],</span><br><span class="line">        [&#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"不限价格"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=&amp;maxPrice="</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"1500以下"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"maxPrice=1500"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"1500~2000"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=1500&amp;maxPrice=2000"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"2000~3000"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=2000&amp;maxPrice=3000"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"3000~5000"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=3000&amp;maxPrice=5000"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"5000~8000"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=5000&amp;maxPrice=8000"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"8000~12000"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=8000&amp;maxPrice=12000"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"12000以上"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"minPrice=12000"</span></span><br><span class="line">        </span>&#125;],</span><br><span class="line">        [&#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"不限"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"rentType="</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"合租"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"rentType=0"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"整租"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"rentType=1"</span></span><br><span class="line">        </span>&#125;],</span><br><span class="line">        [&#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"全部"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"status="</span></span><br><span class="line">        </span>&#125;,&#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"未发布"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"status=1"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"销售中"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"status=2"</span></span><br><span class="line">        </span>&#125;, &#123;</span><br><span class="line">            "<span class="attribute">t</span>": <span class="value"><span class="string">"已出租"</span></span>,</span><br><span class="line">            "<span class="attribute">v</span>": <span class="value"><span class="string">"status=4"</span></span><br><span class="line">        </span>&#125;]</span><br><span class="line">    ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>dom</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">optionBox</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>深圳南山中心区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line">	<span class="tag">&lt;<span class="title">container</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>广州白云区<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">container</span>&gt;</span>		</span><br><span class="line"><span class="tag">&lt;/<span class="title">optionBox</span>&gt;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>我需要判断数据中是否含有”c(context)”来增加一个container，然而在开发时发现除非把数据拆成扁平的与dom结构一致，无法写成层级较深的递归</p>
+<p>联动时 使用了index来标记激活的选项<br>这样做的坏处也是显而易见的<br>如果有四级的联动 就需要手动加一个container<br>：（<br>下次重构 换种思路</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/02/easyer-lazyer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          漫长的倦怠期
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/06/start-from-a-url/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">域名</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

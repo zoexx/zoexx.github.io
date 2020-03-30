@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>使用git flow | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="这里有一份中文的简单说明 👉 git-flow 备忘清单
+命令行说明 👉 Command-Line-Arguments
+
+1234567891011121314λ git flow initInitialized empty Git repository in C:/Users/ibesteeth/Documents/myGitFlow/.git/No branches exist yet.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用git flow">
+<meta property="og:url" content="http://zoexx.github.io/2018/06/20/my-git-flow/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="这里有一份中文的简单说明 👉 git-flow 备忘清单
+命令行说明 👉 Command-Line-Arguments
+
+1234567891011121314λ git flow initInitialized empty Git repository in C:/Users/ibesteeth/Documents/myGitFlow/.git/No branches exist yet.">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.631Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用git flow">
+<meta name="twitter:description" content="这里有一份中文的简单说明 👉 git-flow 备忘清单
+命令行说明 👉 Command-Line-Arguments
+
+1234567891011121314λ git flow initInitialized empty Git repository in C:/Users/ibesteeth/Documents/myGitFlow/.git/No branches exist yet.">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-my-git-flow" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/06/20/my-git-flow/" class="article-date">
+  	<time datetime="2018-06-20T09:54:29.000Z" itemprop="datePublished">2018-06-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用git flow
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-git-flow/">git git-flow</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>这里有一份中文的简单说明 👉 <a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="external">git-flow 备忘清单</a></li>
+<li>命令行说明 👉 <a href="https://github.com/nvie/gitflow/wiki/Command-Line-Arguments" target="_blank" rel="external">Command-Line-Arguments</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">λ git flow init</span><br><span class="line">Initialized empty Git repository <span class="keyword">in</span> C:/Users/ibesteeth/Documents/myGitFlow/.git/</span><br><span class="line">No branches exist yet. Base branches must be created now.</span><br><span class="line">Branch name <span class="keyword">for</span> production releases: [master]</span><br><span class="line">Branch name <span class="keyword">for</span> <span class="string">"next release"</span> development: [develop]</span><br><span class="line"></span><br><span class="line">How to name your supporting branch prefixes?</span><br><span class="line">Feature branches? [feature/]</span><br><span class="line">Bugfix branches? [bugfix/]</span><br><span class="line">Release branches? [release/]</span><br><span class="line">Hotfix branches? [hotfix/]</span><br><span class="line">Support branches? [support/]</span><br><span class="line">Version tag prefix? []</span><br><span class="line">Hooks and filters directory? [C:/Users/ibesteeth/Documents/myGitFlow/.git/hooks]</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>discription</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>特性，功能开发 feature/a_new_feature</td>
+</tr>
+<tr>
+<td>Bugfix</td>
+<td>修复bug bugfix/fix_a_button</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>支持一个新的用于生产环境的发布版本。允许修正小问题，并为发布版本准备元数据。 release/v1.0.0</td>
+</tr>
+<tr>
+<td>Hotfix</td>
+<td>紧急修复一个已经release的版本 hotfix/v1.0.1</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>The ‘support’ feature is still beta, using it is not advised</td>
+</tr>
+<tr>
+<td>Version tag prefix</td>
+<td>版本号前缀 默认为空 可以使用 ‘v’ 0.0.0 =&gt; v0.0.0</td>
+</tr>
+<tr>
+<td>Hooks and filters</td>
+<td>git 的钩子设置</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">λ git flow <span class="built_in">help</span></span><br><span class="line">usage: git flow &lt;subcommand&gt;</span><br><span class="line"></span><br><span class="line">Available subcommands are:</span><br><span class="line">   init      Initialize a new git repo with support <span class="keyword">for</span> the branching model.</span><br><span class="line">   feature   Manage your feature branches.</span><br><span class="line">   bugfix    Manage your bugfix branches.</span><br><span class="line">   release   Manage your release branches.</span><br><span class="line">   hotfix    Manage your hotfix branches.</span><br><span class="line">   support   Manage your support branches.</span><br><span class="line">   version   Shows version information.</span><br><span class="line">   config    Manage your git-flow configuration.</span><br><span class="line">   <span class="built_in">log</span>       Show <span class="built_in">log</span> deviating from base branch.</span><br><span class="line"></span><br><span class="line">Try <span class="string">'git flow &lt;subcommand&gt; help'</span> <span class="keyword">for</span> details.</span><br></pre></td></tr></table></figure>
+<p>git flow 的相关配置项可以在 .git/config 中找到</p>
+<h4 id="关于git-hooks"><a href="#关于git-hooks" class="headerlink" title="关于git hooks"></a>关于git hooks</h4><p>和其它版本控制系统一样，Git 能在特定的重要动作发生时触发自定义脚本。在项目的 .git/hooks/ 下可以找到所有可以使用的钩子。</p>
+<p>除了 <strong>pre-receive</strong> <strong>update</strong> <strong>post-receive</strong> 属于服务端使用的钩子， 其他均为客户端钩子。</p>
+<blockquote>
+<p>需要注意的是，克隆某个版本库时，它的客户端钩子 <strong>并不</strong> 随同复制。</p>
+</blockquote>
+<ul>
+<li>applypatch-msg.sample 电邮工作流 由 git am 命令开始时触发</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># An example hook script to check the commit log message taken by</span></span><br><span class="line"><span class="comment"># applypatch from an e-mail message.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The hook should exit with non-zero status after issuing an</span></span><br><span class="line"><span class="comment"># appropriate message if it wants to stop the commit.  The hook is</span></span><br><span class="line"><span class="comment"># allowed to edit the commit message file.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "applypatch-msg".</span></span><br><span class="line"></span><br><span class="line">. git-sh-setup</span><br><span class="line">commitmsg=<span class="string">"<span class="variable">$(git rev-parse --git-path hooks/commit-msg)</span>"</span></span><br><span class="line"><span class="built_in">test</span> -x <span class="string">"<span class="variable">$commitmsg</span>"</span> &amp;&amp; <span class="built_in">exec</span> <span class="string">"<span class="variable">$commitmsg</span>"</span> <span class="variable">$&#123;1+"$@"&#125;</span></span><br><span class="line">:</span><br></pre></td></tr></table></figure>
+<ul>
+<li>pre-applypatch.sample 电邮工作流 由 git am 运行期间触发，它正好运行于应用补丁 之后，产生提交之前</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># An example hook script to verify what is about to be committed</span></span><br><span class="line"><span class="comment"># by applypatch from an e-mail message.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The hook should exit with non-zero status after issuing an</span></span><br><span class="line"><span class="comment"># appropriate message if it wants to stop the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "pre-applypatch".</span></span><br><span class="line"></span><br><span class="line">. git-sh-setup</span><br><span class="line">precommit=<span class="string">"<span class="variable">$(git rev-parse --git-path hooks/pre-commit)</span>"</span></span><br><span class="line"><span class="built_in">test</span> -x <span class="string">"<span class="variable">$precommit</span>"</span> &amp;&amp; <span class="built_in">exec</span> <span class="string">"<span class="variable">$precommit</span>"</span> <span class="variable">$&#123;1+"$@"&#125;</span></span><br><span class="line">:</span><br></pre></td></tr></table></figure>
+<ul>
+<li>commit-msg.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># An example hook script to check the commit log message.</span></span><br><span class="line"><span class="comment"># Called by "git commit" with one argument, the name of the file</span></span><br><span class="line"><span class="comment"># that has the commit message.  The hook should exit with non-zero</span></span><br><span class="line"><span class="comment"># status after issuing an appropriate message if it wants to stop the</span></span><br><span class="line"><span class="comment"># commit.  The hook is allowed to edit the commit message file.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "commit-msg".</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the below to add a Signed-off-by line to the message.</span></span><br><span class="line"><span class="comment"># Doing this in a hook is a bad idea in general, but the prepare-commit-msg</span></span><br><span class="line"><span class="comment"># hook is more suited to it.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># SOB=$(git var GIT_AUTHOR_IDENT | sed -n 's/^\(.*&gt;\).*$/Signed-off-by: \1/p')</span></span><br><span class="line"><span class="comment"># grep -qs "^$SOB" "$1" || echo "$SOB" &gt;&gt; "$1"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This example catches duplicate Signed-off-by lines.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> <span class="string">""</span> = <span class="string">"<span class="variable">$(grep '^Signed-off-by: ' "$1" |</span><br><span class="line">         sort | uniq -c | sed -e '/^[   ]*1[    ]/d')</span>"</span> || &#123;</span><br><span class="line">        <span class="built_in">echo</span> &gt;&amp;<span class="number">2</span> Duplicate Signed-off-by lines.</span><br><span class="line">        <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>pre-commit.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to verify what is about to be committed.</span></span><br><span class="line"><span class="comment"># Called by "git commit" with no arguments.  The hook should</span></span><br><span class="line"><span class="comment"># exit with non-zero status after issuing an appropriate message if</span></span><br><span class="line"><span class="comment"># it wants to stop the commit.</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>prepare-commit-msg.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to prepare the commit log message.</span></span><br><span class="line"><span class="comment"># Called by "git commit" with the name of the file that has the</span></span><br><span class="line"><span class="comment"># commit message, followed by the description of the commit</span></span><br><span class="line"><span class="comment"># message's source.  The hook's purpose is to edit the commit</span></span><br><span class="line"><span class="comment"># message file.  If the hook fails with a non-zero status,</span></span><br><span class="line"><span class="comment"># the commit is aborted.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "prepare-commit-msg".</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This hook includes three examples. The first one removes the</span></span><br><span class="line"><span class="comment"># "# Please enter the commit message..." help message.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The second includes the output of "git diff --name-status -r"</span></span><br><span class="line"><span class="comment"># into the message, just before the "git status" output.  It is</span></span><br><span class="line"><span class="comment"># commented because it doesn't cope with --amend or with squashed</span></span><br><span class="line"><span class="comment"># commits.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The third example adds a Signed-off-by line to the message, that can</span></span><br><span class="line"><span class="comment"># still be edited.  This is rarely a good idea.</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>fsmonitor-watchman.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to integrate Watchman</span></span><br><span class="line"><span class="comment"># (https://facebook.github.io/watchman/) with git to speed up detecting</span></span><br><span class="line"><span class="comment"># new and modified files.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The hook is passed a version (currently 1) and a time in nanoseconds</span></span><br><span class="line"><span class="comment"># formatted as a string and outputs to stdout all files that have been</span></span><br><span class="line"><span class="comment"># modified since the given time. Paths must be relative to the root of</span></span><br><span class="line"><span class="comment"># the working tree and separated by a single NUL.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "query-watchman" and set</span></span><br><span class="line"><span class="comment"># 'git config core.fsmonitor .git/hooks/query-watchman'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>post-update.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># An example hook script to prepare a packed repository for use over</span></span><br><span class="line"><span class="comment"># dumb transports.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "post-update".</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exec</span> git update-server-info</span><br></pre></td></tr></table></figure>
+<ul>
+<li>pre-push.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to verify what is about to be pushed.  Called by "git</span></span><br><span class="line"><span class="comment"># push" after it has checked the remote status, but before anything has been</span></span><br><span class="line"><span class="comment"># pushed.  If this script exits with a non-zero status nothing will be pushed.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This hook is called with the following parameters:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># $1 -- Name of the remote to which the push is being done</span></span><br><span class="line"><span class="comment"># $2 -- URL to which the push is being done</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If pushing without using a named remote those arguments will be equal.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Information about the commits which are being pushed is supplied as lines to</span></span><br><span class="line"><span class="comment"># the standard input in the form:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   &lt;local ref&gt; &lt;local sha1&gt; &lt;remote ref&gt; &lt;remote sha1&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This sample shows how to prevent push of commits where the log message starts</span></span><br><span class="line"><span class="comment"># with "WIP" (work in progress).</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>pre-rebase.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The "pre-rebase" hook is run just before "git rebase" starts doing</span></span><br><span class="line"><span class="comment"># its job, and can prevent the command from running by exiting with</span></span><br><span class="line"><span class="comment"># non-zero status.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The hook is called with the following parameters:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># $1 -- the upstream the series was forked from.</span></span><br><span class="line"><span class="comment"># $2 -- the branch being rebased (or empty when rebasing the current branch).</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This sample shows how to prevent topic branches that are already</span></span><br><span class="line"><span class="comment"># merged to 'next' branch from getting rebased, because allowing it</span></span><br><span class="line"><span class="comment"># would result in rebasing already published history.</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>pre-receive.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to make use of push options.</span></span><br><span class="line"><span class="comment"># The example simply echoes all push options that start with 'echoback='</span></span><br><span class="line"><span class="comment"># and rejects all pushes when the "reject" push option is used.</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>update.sample</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># An example hook script to block unannotated tags from entering.               </span></span><br><span class="line"><span class="comment"># Called by "git receive-pack" with arguments: refname sha1-old sha1-new        </span></span><br><span class="line"><span class="comment">#                                                                               </span></span><br><span class="line"><span class="comment"># To enable this hook, rename this file to "update".                            </span></span><br><span class="line"><span class="comment">#                                                                               </span></span><br><span class="line"><span class="comment"># Config                                                                        </span></span><br><span class="line"><span class="comment"># ------                                                                        </span></span><br><span class="line"><span class="comment"># hooks.allowunannotated                                                        </span></span><br><span class="line"><span class="comment">#   This boolean sets whether unannotated tags will be allowed into the         </span></span><br><span class="line"><span class="comment">#   repository.  By default they won't be.                                      </span></span><br><span class="line"><span class="comment"># hooks.allowdeletetag                                                          </span></span><br><span class="line"><span class="comment">#   This boolean sets whether deleting tags will be allowed in the              </span></span><br><span class="line"><span class="comment">#   repository.  By default they won't be.                                      </span></span><br><span class="line"><span class="comment"># hooks.allowmodifytag                                                          </span></span><br><span class="line"><span class="comment">#   This boolean sets whether a tag may be modified after creation. By default  </span></span><br><span class="line"><span class="comment">#   it won't be.                                                                </span></span><br><span class="line"><span class="comment"># hooks.allowdeletebranch                                                       </span></span><br><span class="line"><span class="comment">#   This boolean sets whether deleting branches will be allowed in the          </span></span><br><span class="line"><span class="comment">#   repository.  By default they won't be.                                      </span></span><br><span class="line"><span class="comment"># hooks.denycreatebranch                                                        </span></span><br><span class="line"><span class="comment">#   This boolean sets whether remotely creating branches will be denied         </span></span><br><span class="line"><span class="comment">#   in the repository.  By default this is allowed.</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a href="https://git-scm.com/book/en/v2" target="_blank" rel="external">git book</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/04/gitgitgit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          git指北
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/13/learn-LKM/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">认识 LKM</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>有趣的linux（Debian）命令 | zoe | blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zoe zoexx coding zoexx.github.io">
+  <meta name="baidu-site-verification" content="udDjGff8vn" />
+  <meta name="description" content="本 APT 具有超级牛力是什么鬼？
+ apt-get is the command-line tool for handling packages, and may be considered the user’s “back-end” to other tools using the APT library. Several “front-end” interfaces exist, such">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有趣的linux（Debian）命令">
+<meta property="og:url" content="http://zoexx.github.io/2017/11/28/funnyCommandInLinux/index.html">
+<meta property="og:site_name" content="zoe | blog">
+<meta property="og:description" content="本 APT 具有超级牛力是什么鬼？
+ apt-get is the command-line tool for handling packages, and may be considered the user’s “back-end” to other tools using the APT library. Several “front-end” interfaces exist, such">
+<meta property="og:image" content="http://cdn.zoeservers.com/blog/apt_20171128163821.png">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1512466632&di=b22654281d39ca66b2085d11de46b2aa&imgtype=jpg&er=1&src=http%3A%2F%2Ffarm1.staticflickr.com%2F53%2F120157809_d3a7ee3718.jpg">
+<meta property="og:updated_time" content="2019-07-16T09:10:57.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="有趣的linux（Debian）命令">
+<meta name="twitter:description" content="本 APT 具有超级牛力是什么鬼？
+ apt-get is the command-line tool for handling packages, and may be considered the user’s “back-end” to other tools using the APT library. Several “front-end” interfaces exist, such">
+  
+    <link rel="alternative" href="/atom.xml" title="zoe | blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://cdn.zoeservers.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zoe Ying</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">瞎叨叨</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/SPA/" style="font-size: 10px;">SPA</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/git-git-flow/" style="font-size: 10px;">git git-flow</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/hybird/" style="font-size: 10px;">hybird</a> <a href="/tags/ideas/" style="font-size: 10px;">ideas</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/life/" style="font-size: 16.67px;">life</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/linux-dueros/" style="font-size: 10px;">linux dueros</a> <a href="/tags/mailchimp/" style="font-size: 10px;">mailchimp</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/php-wechat/" style="font-size: 10px;">php wechat</a> <a href="/tags/qshell-tool/" style="font-size: 10px;">qshell tool</a> <a href="/tags/raspberry/" style="font-size: 10px;">raspberry</a> <a href="/tags/tools/" style="font-size: 10px;">tools</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat-小程序/" style="font-size: 10px;">wechat 小程序</a> <a href="/tags/微信小程序/" style="font-size: 10px;">微信小程序</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zoe Ying</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.zoeservers.com/myMarioBlue.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zoe Ying</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">瞎叨叨</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://zoexx.github.io/" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-funnyCommandInLinux" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/28/funnyCommandInLinux/" class="article-date">
+  	<time datetime="2017-11-28T08:26:21.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      有趣的linux（Debian）命令
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="本-APT-具有超级牛力是什么鬼？"><a href="#本-APT-具有超级牛力是什么鬼？" class="headerlink" title="本 APT 具有超级牛力是什么鬼？"></a>本 APT 具有超级牛力是什么鬼？</h2><blockquote>
+<p> apt-get is the command-line tool for handling packages, and may be considered the user’s “back-end” to other tools using the APT library. Several “front-end” interfaces exist, such as aptitude(8), synaptic(8) and wajig(1).</p>
+</blockquote>
+<p>给系统做了汉化之后，Sean发现执行apt-get命令时，command说明的最后一行出现了“本 APT 具有超级牛力”。英文是”This APT has Super Cow Powers.”。</p>
+<p><img src="http://cdn.zoeservers.com/blog/apt_20171128163821.png" alt="本 APT 具有超级牛力"></p>
+<p>有趣的是<a href="https://baike.baidu.com/item/aptitude/6849487?fr=aladdin" target="_blank" rel="external">aptitude</a>的说明中也出现了牛力。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ aptitude <span class="comment">--help</span></span><br></pre></td></tr></table></figure>
+<p>“这个 aptitude 没有超级牛力。”</p>
+<p>“This aptitude does not have Super Cow Powers.”</p>
+<p>好吧，在此之前，我其实也有用过一个有趣的小命令，叫 cowsay 。</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pi<span class="comment">@raspberrypi:~ $ cowsay hello world</span></span><br><span class="line"> _____________</span><br><span class="line"><span class="variable">&lt; hello world &gt;</span></span><br><span class="line"> -------------</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||<span class="string">----w </span>|</span><br><span class="line">                ||<span class="string">     </span>||</span><br></pre></td></tr></table></figure>
+<p>那么，为什么这一堆程序员这么偏爱牛呢？🐮🐮🐮🐮</p>
+<h4 id="What’s-the-story-behind-Super-Cow-Powers"><a href="#What’s-the-story-behind-Super-Cow-Powers" class="headerlink" title="What’s the story behind Super Cow Powers?"></a>What’s the story behind Super Cow Powers?</h4><blockquote>
+<p>Apt started its life around 1997 and entered Debian officially around 1999. During its early days, Jason Gunthorpe was its main maintainer/developer. Well, apparently Jason liked cows. I don’t know if he still does. :-) Anyway, I think the apt-get moo thing was added by him as a joke. The corresponding aptitude easter eggs (see below) were added later by Daniel Burrows as a homage, I think.</p>
+</blockquote>
+<blockquote>
+<p>If there is more to the story, Jason is probably the person to ask. He has (likely in response to this question) written a post on Google+. A small bit of it:</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Once a long time ago a developer was known for announcing his presence on IRC with a simple, to the point ‘Moo’. As with cows in pasture others would often Moo back in greeting. This led to a certain range of cow based jokes.</p>
+</blockquote>
+</blockquote>
+<p>以上是来自<a href="https://unix.stackexchange.com/questions/92185/whats-the-story-behind-super-cow-powers" target="_blank" rel="external">unix.stackexchange.com</a>的高票回答。</p>
+<p>吼，原来是<a href="https://baike.baidu.com/item/IRC/10410?fr=aladdin" target="_blank" rel="external">IRC</a>( Internet Relay Chat )时代的故事。</p>
+<p>脑补对话:</p>
+<ul>
+<li>zoe: moo.    </li>
+<li><small>( anyone else? )</small></li>
+<li>sean: moo~   </li>
+<li><small>( yes,here. )</small></li>
+<li>della: moo~  </li>
+<li><small>( here I am. )</small></li>
+</ul>
+<h4 id="更多牛力请尝试👇"><a href="#更多牛力请尝试👇" class="headerlink" title="更多牛力请尝试👇"></a>更多牛力请尝试👇</h4><p>万圣节彩蛋？<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>aptitude moo</span><br><span class="line"><span class="variable">$ </span>aptitude -v moo</span><br><span class="line"><span class="variable">$ </span>aptitude -vv moo</span><br><span class="line"><span class="variable">$ </span>aptitude -vvv moo</span><br><span class="line"><span class="variable">$ </span>aptitude -vvvv moo</span><br><span class="line"><span class="variable">$ </span>aptitude -vvvvv moo</span><br><span class="line"><span class="variable">$ </span>aptitude -vvvvvv moo</span><br></pre></td></tr></table></figure></p>
+<p>Have you mooed today?<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="keyword">get</span> moo</span><br><span class="line">$ apt-<span class="keyword">get</span> moo moo</span><br><span class="line">$ apt-<span class="keyword">get</span> moo moo moo</span><br></pre></td></tr></table></figure></p>
+<p>其实cowsay不仅仅🐮say，还有很多小动物<br>Show all available cows<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> /usr/share/cowsay/cows/*.cow; <span class="keyword">do</span> cowsay <span class="operator">-f</span> <span class="variable">$i</span> <span class="string">"<span class="variable">$i</span>"</span>; <span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="其它有趣的命令（有一些是没有打包在系统中的需要手动装一下，apt-get-install-in-Debian）"><a href="#其它有趣的命令（有一些是没有打包在系统中的需要手动装一下，apt-get-install-in-Debian）" class="headerlink" title="其它有趣的命令（有一些是没有打包在系统中的需要手动装一下，apt-get install in Debian）"></a>其它有趣的命令（有一些是没有打包在系统中的需要手动装一下，apt-get install in Debian）</h4><h5 id="1-sl大家应该都知道，手误的时候可以看火车呜呜呜的经过"><a href="#1-sl大家应该都知道，手误的时候可以看火车呜呜呜的经过" class="headerlink" title="1. sl大家应该都知道，手误的时候可以看火车呜呜呜的经过"></a>1. sl大家应该都知道，手误的时候可以看火车呜呜呜的经过</h5><h5 id="2-cmatrix-屏保-🙂-黑客帝国的大门为你打开（假装）"><a href="#2-cmatrix-屏保-🙂-黑客帝国的大门为你打开（假装）" class="headerlink" title="2. cmatrix 屏保 🙂 黑客帝国的大门为你打开（假装）"></a>2. cmatrix 屏保 🙂 黑客帝国的大门为你打开（假装）</h5><h5 id="3-fortune"><a href="#3-fortune" class="headerlink" title="3. fortune"></a>3. fortune</h5><p>美国中餐馆的最后一道菜，往往是小甜饼，叫做”幸运饼”（fortune cookie）。里面有一张纸条，写着人生格言。</p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512466632&amp;di=b22654281d39ca66b2085d11de46b2aa&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Ffarm1.staticflickr.com%2F53%2F120157809_d3a7ee3718.jpg" alt="fortune cookie"></p>
+<p>这种形式的格言非常受欢迎，1979年，就有人写了一个叫做 fortune 的小程序。每一次执行都可以得到一条随机的格言/故事。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">pi</span>@raspberrypi:~ $ fortune</span><br><span class="line">If one cannot enjoy reading a book <span class="keyword">over</span> <span class="keyword">and</span> <span class="keyword">over</span> again, there <span class="keyword">is</span> no use</span><br><span class="line"><span class="keyword">in</span> reading <span class="keyword">it</span> <span class="keyword">at</span> all.</span><br><span class="line">		<span class="comment">-- Oscar Wilde</span></span><br></pre></td></tr></table></figure>
+<p>还有中文版的 fortune-zh 。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pi<span class="variable">@raspberrypi</span><span class="symbol">:~</span> <span class="variable">$ </span>fortune-zh</span><br><span class="line">《赠内人》</span><br><span class="line">作者：张祜</span><br><span class="line">禁门宫树月痕过，媚眼惟看宿鹭巢。</span><br><span class="line">斜拔玉钗灯影畔，剔开红焰救飞蛾。</span><br></pre></td></tr></table></figure>
+<p>use fortune with cowsay ~</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">pi<span class="property">@raspberrypi</span>:~ $ fortune | cowsay</span><br><span class="line"> ________________________________________</span><br><span class="line">/ My only love sprung <span class="keyword">from</span> my only hate! <span class="string">\</span></span><br><span class="line">| Too early seen unknown, <span class="keyword">and</span> known too  |</span><br><span class="line">| late!                                  |</span><br><span class="line">|                                        |</span><br><span class="line">| -- William Shakespeare, <span class="string">"Romeo and     |</span><br><span class="line">\ Juliet"</span>                                /</span><br><span class="line"> ----------------------------------------</span><br><span class="line">        <span class="string">\</span>   ^__^</span><br><span class="line">         <span class="string">\</span>  (oo)<span class="string">\_______</span></span><br><span class="line">            (__)<span class="string">\</span>       )<span class="string">\/\</span></span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br></pre></td></tr></table></figure>
+<p>Have a random “cow” say a random thing<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">pi@raspberrypi:~ $ fortune <span class="string">| cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)</span></span><br><span class="line"> ________________________________________</span><br><span class="line">/ It is a wise father that knows his own \</span><br><span class="line"><span class="string">| child.                                 |</span></span><br><span class="line"><span class="string">|                                        |</span></span><br><span class="line"><span class="string">| -- William Shakespeare, "</span>The Merchant  <span class="string">|</span></span><br><span class="line">\ of Venice<span class="string">"                             /</span></span><br><span class="line"> ----------------------------------------</span><br><span class="line"> \     /\  ___  /\</span><br><span class="line">  \   <span class="comment">// \/   \/ \\</span></span><br><span class="line">     ((    O O    ))</span><br><span class="line">      \\ /     \ <span class="comment">//</span></span><br><span class="line">       \/  <span class="string">| |  \/ </span></span><br><span class="line">        <span class="string">|  | |  |  </span></span><br><span class="line">        <span class="string">|  | |  |  </span></span><br><span class="line">        <span class="string">|   o   |  </span></span><br><span class="line">        <span class="string">| |   | |  </span></span><br><span class="line">        <span class="string">|m|   |m|</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="4-ddate"><a href="#4-ddate" class="headerlink" title="4. ddate"></a>4. ddate</h5><blockquote>
+<p>ddate prints the date in Discordian date format.</p>
+</blockquote>
+<p>是否厌倦了千百年不变的<a href="https://en.wikipedia.org/wiki/Gregorian_calendar" target="_blank" rel="external"> Gregorian Calendar（罗马教历）</a>？准备好乱入了吗？试试输入“ddate”。这样会把当前日历以<a href="https://en.wikipedia.org/wiki/Discordian_calendar" target="_blank" rel="external">Discordian Calendar（不和教历）</a>的方式显示出来。你会遇见这样的语句：</p>
+<p>“今天是Sweetmorn（甜美的清晨），3181年Discord（不和）季的第18天。”</p>
+<h5 id="5-adventure-文字冒险游戏"><a href="#5-adventure-文字冒险游戏" class="headerlink" title="5. adventure 文字冒险游戏"></a>5. adventure 文字冒险游戏</h5><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">pi</span>@raspberrypi:~ $ adventure </span><br><span class="line"></span><br><span class="line">Welcome <span class="keyword">to</span> Adventure!!  Would you like instructions?</span><br><span class="line">yes</span><br><span class="line"></span><br><span class="line">Somewhere nearby <span class="keyword">is</span> Colossal Cave, <span class="keyword">where</span> others have found fortunes <span class="keyword">in</span></span><br><span class="line">treasure <span class="keyword">and</span> gold, though <span class="keyword">it</span> <span class="keyword">is</span> rumored <span class="keyword">that</span> <span class="keyword">some</span> who enter are never</span><br><span class="line">seen again.  Magic <span class="keyword">is</span> said <span class="keyword">to</span> work <span class="keyword">in</span> <span class="keyword">the</span> cave.  I will be your eyes</span><br><span class="line"><span class="keyword">and</span> hands.  Direct <span class="keyword">me</span> <span class="keyword">with</span> commands <span class="keyword">of</span> <span class="number">1</span> <span class="keyword">or</span> <span class="number">2</span> <span class="property">words</span>.  I should warn</span><br><span class="line">you <span class="keyword">that</span> I look <span class="keyword">at</span> only <span class="keyword">the</span> <span class="keyword">first</span> five letters <span class="keyword">of</span> each <span class="property">word</span>, so you'll</span><br><span class="line">have <span class="keyword">to</span> enter <span class="string">"northeast"</span> <span class="keyword">as</span> <span class="string">"ne"</span> <span class="keyword">to</span> distinguish <span class="keyword">it</span> <span class="keyword">from</span> <span class="string">"north"</span>.</span><br><span class="line">(Should you <span class="keyword">get</span> stuck, type <span class="string">"help"</span> <span class="keyword">for</span> <span class="keyword">some</span> general hints.  For</span><br><span class="line">information <span class="function_start"><span class="keyword">on</span></span> how <span class="keyword">to</span> <span class="keyword">end</span> your adventure, etc., type <span class="string">"info"</span>.)</span><br><span class="line">			      - - -</span><br><span class="line">This program was originally developed <span class="keyword">by</span> Will Crowther.  Most <span class="keyword">of</span> <span class="keyword">the</span></span><br><span class="line">features <span class="keyword">of</span> <span class="keyword">the</span> current program were added <span class="keyword">by</span> Don Woods.  Address</span><br><span class="line">complaints <span class="keyword">about</span> <span class="keyword">the</span> UNIX <span class="property">version</span> <span class="keyword">to</span> Jim Gillogly (jim@rand.org).</span><br><span class="line"></span><br><span class="line">You are standing <span class="keyword">at</span> <span class="keyword">the</span> <span class="keyword">end</span> <span class="keyword">of</span> a road <span class="keyword">before</span> a small brick building.</span><br><span class="line">Around you <span class="keyword">is</span> a forest.  A small stream flows <span class="keyword">out of</span> <span class="keyword">the</span> building <span class="keyword">and</span></span><br><span class="line">down a gully.</span><br><span class="line">up</span><br><span class="line"></span><br><span class="line">You have walked up a hill, still <span class="keyword">in</span> <span class="keyword">the</span> forest.  The road slopes <span class="keyword">back</span></span><br><span class="line">down <span class="keyword">the</span> other side <span class="keyword">of</span> <span class="keyword">the</span> hill.  There <span class="keyword">is</span> a building <span class="keyword">in</span> <span class="keyword">the</span> distance.</span><br><span class="line">.......</span><br></pre></td></tr></table></figure>
+<p>这个游戏可以通过安装 bsdgames 得到。<a href="http://wiki.linuxquestions.org/wiki/BSD_games" target="_blank" rel="external">bsdgames</a>包含了adventure和其它经典文字游戏，都可以尝试一下哦。</p>
+<p>都在 /usr/games/ 目录里。</p>
+<h3 id="更多更多有趣-amp-实用的命令👉http-www-commandlinefu-com"><a href="#更多更多有趣-amp-实用的命令👉http-www-commandlinefu-com" class="headerlink" title="更多更多有趣&amp;实用的命令👉http://www.commandlinefu.com"></a>更多更多有趣&amp;实用的命令👉<a href="http://www.commandlinefu.com" target="_blank" rel="external">http://www.commandlinefu.com</a></h3>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/05/dueros-v1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          dueros_v1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/15/wechat-app-and-wechat-subscription/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序绑定微信公众号之后的能力</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+<section style="background:#ffffff;margin:30px;padding:30px;border:1px solid #dddddd;">
+  <div id="gitment"></div>
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script>
+    var gitment = new Gitment({
+        owner: 'zoexx',
+        repo: 'zoexx.github.io',
+        oauth: {
+          client_id: 'bc4f763b8aebcfa97e88',
+          client_secret: 'e63aca5b0a2f237b3a1f2751fd95a2e866447817',
+        },
+      });
+    gitment.render('gitment');
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</section>
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2020 Zoe Ying
+    	</div>
+      	<div class="footer-right">
+      		<a href="https://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258930011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258930011%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>
